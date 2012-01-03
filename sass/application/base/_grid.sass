@@ -1,0 +1,13 @@
+$column: 240px
+$gutter: 14px
+
+=column($num:1, $last:false)
+  width: (($column * $num) + ($gutter * ($num - 1)))
+  margin-right: $gutter
+  +box-sizing("border-box")
+  @if $last
+    margin-right: 0
+
+=layout_width
+  width: (($column * 4) + ($gutter * 3))
+  +box-sizing("border-box")
