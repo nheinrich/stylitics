@@ -1,1 +1,48 @@
+// elements 
+// note: profile specific but built modularly
+.cover
+  height: 282px
+  padding: 19px
+  .user
+    display: inline-block
+    padding: 12px
+    background: rgba(0, 0, 0, .85)
+    img
+      +float-left
+      width: 114px
+      height: 114px
+      margin-right: 12px
+    .info
+      +float-left      
+    header
+      +float-left
+      clear: both      
+      margin: 0 24px 7px 0
+    h1, h2
+      +din-regular
+    h1
+      color: $txt_white
+      font-size: 30px
+      margin-bottom: 3px
+    h2
+      color: $txt_gray_medium
+      font-size: 24px
+    .quote
+      display: block
+      clear: left
+      max-width: 320px
+      padding: 5px 0 0 27px
+      line-height: 1.4em
+      background: image-url("icons/quote.png") top left no-repeat
+      
+      // add quote icon (img)
+      +museo-slab-italic
+      color: $txt_gray_light
+    .badge
+      +float-right
+
+
+// profile
+
 body#profile
+

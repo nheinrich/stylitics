@@ -54,6 +54,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+@font-face {
+  font-family: "Conv_FF_DIN_Condensed_Medium";
+  src: url("../fonts/ff-din-condensed-med/FF_DIN_Condensed_Medium.eot");
+  src: url("../fonts/ff-din-condensed-med/FF_DIN_Condensed_Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/ff-din-condensed-med/FF_DIN_Condensed_Medium.woff") format("woff"), url("../fonts/ff-din-condensed-med/FF_DIN_Condensed_Medium.ttf") format("truetype"), url("../fonts/ff-din-condensed-med/FF_DIN_Condensed_Medium.svg#digitaldreamfat") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Conv_FF_DIN_Condensed_Regular";
+  src: url("../fonts/ff-din-condensed-reg/FF_DIN_Condensed_Regular.eot");
+  src: url("../fonts/ff-din-condensed-reg/FF_DIN_Condensed_Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ff-din-condensed-reg/FF_DIN_Condensed_Regular.woff") format("woff"), url("../fonts/ff-din-condensed-reg/FF_DIN_Condensed_Regular.ttf") format("truetype"), url("../fonts/ff-din-condensed-reg/FF_DIN_Condensed_Regular.svg#digitaldreamfat") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Conv_Museo_Slab_500italic";
+  src: url("../fonts/museo-slab-italic/Museo_Slab_500italic.eot");
+  src: url("../fonts/museo-slab-italic/Museo_Slab_500italic.eot?#iefix") format("embedded-opentype"), url("../fonts/museo-slab-italic/Museo_Slab_500italic.woff") format("woff"), url("../fonts/museo-slab-italic/Museo_Slab_500italic.ttf") format("truetype"), url("../fonts/museo-slab-italic/Museo_Slab_500italic.svg#digitaldreamfat") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   height: 100%;
 }
@@ -82,4 +106,115 @@ body {
   width: 1040px;
   height: 88px;
   background: url('/images/temp/footer.png?1325611863');
+}
+
+.badge {
+  height: 35px;
+  padding-left: 10px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: white;
+  background: url('/images/badge/left.png?1325619235') top left no-repeat;
+}
+.badge span {
+  display: block;
+  height: 25px;
+  padding: 5px 10px 5px 0;
+  font-size: 18px;
+  background: url('/images/badge/right.png?1325619235') top right no-repeat;
+}
+
+a.button {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #4c4b4b;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cecece), color-stop(100%, #f7f7f7));
+  background-image: -webkit-linear-gradient(#cecece, #f7f7f7);
+  background-image: -moz-linear-gradient(#cecece, #f7f7f7);
+  background-image: -o-linear-gradient(#cecece, #f7f7f7);
+  background-image: -ms-linear-gradient(#cecece, #f7f7f7);
+  background-image: linear-gradient(#cecece, #f7f7f7);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #bebebe;
+}
+a.button {
+  *display: inline;
+}
+
+a.button.small {
+  padding: 4px 8px;
+}
+
+nav.page {
+  height: 37px;
+  padding: 0 19px;
+  background: #f3f3f3;
+}
+nav.page a.button.small {
+  margin-top: 5px;
+}
+
+.cover {
+  height: 282px;
+  padding: 19px;
+}
+.cover .user {
+  display: inline-block;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.85);
+}
+.cover .user img {
+  display: inline;
+  float: left;
+  width: 114px;
+  height: 114px;
+  margin-right: 12px;
+}
+.cover .user .info {
+  display: inline;
+  float: left;
+}
+.cover .user header {
+  display: inline;
+  float: left;
+  clear: both;
+  margin: 0 24px 7px 0;
+}
+.cover .user h1, .cover .user h2 {
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+}
+.cover .user h1 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 3px;
+}
+.cover .user h2 {
+  color: #999999;
+  font-size: 24px;
+}
+.cover .user .quote {
+  display: block;
+  clear: left;
+  max-width: 320px;
+  padding: 5px 0 0 27px;
+  line-height: 1.4em;
+  background: url('/images/icons/quote.png?1325618598') top left no-repeat;
+  font-family: "Conv_Museo_Slab_500italic", Georgia, Serif;
+  color: #cacaca;
+}
+.cover .user .badge {
+  display: inline;
+  float: right;
 }
