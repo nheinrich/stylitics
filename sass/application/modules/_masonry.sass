@@ -1,0 +1,143 @@
+// masonry / grid / boxes ----------------------------------------------------
+
+.grid
+  +clearfix
+  width: 1002px
+  margin: 0 auto
+  padding: 0 19px 19px
+  
+  .group
+    clear: both
+    header
+      margin: 19px 0
+      h1
+        +inline-block
+        padding: 6px 14px
+        +din-regular
+        color: $txt_white
+        font-size: 24px
+        background: image-url("patterns/bg_gray_diagonal.png")
+
+  .box
+    // width: 212px + padding: 24px + border: 2px + shadow: 2px = 240px
+    position: relative
+    display: block
+    +float-left
+    width: 212px
+    min-height: 24px
+    margin: 0 16px 16px 0
+    padding: 12px 12px 7px
+    background: #fff
+    border: 1px solid #cdcdcd
+    +single-box-shadow(rgba(128, 128, 128, .5), 0, 0, 1px, 0)
+    header
+      position: absolute
+      top: 5px
+      left: -6px
+      height: 34px
+      padding: 5px 10px 0 8px
+      +din-medium
+      color: $txt_gray_dark
+      font-size: 14px
+      background: image-url("patterns/bg_green_header.png") top left no-repeat
+    .body
+      +arial
+      color: #343434
+      font-size: 13px
+    .thumbnail
+      position: relative
+      width: 212px
+      .image
+        display: block
+        line-height: 0
+        img
+          width: 212px
+      .edit
+        display: none
+        position: absolute
+        top: 0
+        right: 0
+        width: 40px
+        height: 19px
+        padding-top: 7px
+        +din-regular
+        color: $txt_white
+        font-size: 13px
+        text-align: center
+        text-decoration: none
+        background: #222
+      p
+        display: none
+        position: absolute
+        bottom: 0
+        padding: 6px 8px 7px
+        +arial
+        font-size: 11px
+        line-height: 15px
+        color: $txt_white
+        background: #222
+    footer
+      +clearfix
+      padding-top: 8px
+      a
+        padding-left: 17px
+        +din-regular
+        color: #656565
+        font-size: 12px
+        text-decoration: none
+      .comment
+        +float-left
+        background: image-url("icons/16px/comment.png") top left no-repeat
+      .like
+        +float-right
+        background: image-url("icons/16px/like.png") top left no-repeat
+
+
+// box (specific variations) -------------------------------------------------
+
+.box.links
+  li 
+    display: block
+    float: left
+    margin: 0 7px 7px 0
+    a
+      width: 24px
+      height: 24px
+      background-position: top left
+      background-repeat: no-repeat
+  li.about a
+    background: image-url("icons/social/aboutme.png")
+  li.blogger a
+    background: image-url("icons/social/blogger.png")
+  li.facebook a
+    background: image-url("icons/social/facebook.png")  
+  li.flickr a
+    background: image-url("icons/social/flickr.png")
+  li.google a
+    background: image-url("icons/social/google_plus.png")  
+  li.linked_in a
+    background: image-url("icons/social/linkedin.png")  
+  li.pinterest a
+    background: image-url("icons/social/pinterest.png")  
+  li.portfolio a
+    background: image-url("icons/social/portfolio.png")  
+  li.tumblr a
+    background: image-url("icons/social/tumblr.png")  
+  li.twitter a
+    background: image-url("icons/social/twitter.png")  
+  li.website a
+    background: image-url("icons/social/website.png")  
+  li.wordpress a
+    background: image-url("icons/social/wordpress.png")  
+
+.box.purchases
+
+.box.seeking
+
+.box.sites
+
+.box.text
+
+.box.with_header
+  padding-top: 40px
+

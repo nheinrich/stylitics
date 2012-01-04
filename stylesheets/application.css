@@ -78,11 +78,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-html {
-  height: 100%;
-}
-
 body {
+  height: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #ffffff));
   background-image: -webkit-linear-gradient(#000000, #ffffff);
   background-image: -moz-linear-gradient(#000000, #ffffff);
@@ -94,6 +91,7 @@ body {
 #layout {
   width: 1040px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 #layout > header {
@@ -121,7 +119,7 @@ body {
   height: 25px;
   padding: 5px 10px 5px 0;
   font-size: 18px;
-  background: url('/images/badge/right.png?1325619235') top right no-repeat;
+  background: url('/images/badge/right.png?1325619898') top right no-repeat;
 }
 
 a.button {
@@ -156,6 +154,182 @@ a.button.small {
   padding: 4px 8px;
 }
 
+.grid {
+  overflow: hidden;
+  *zoom: 1;
+  width: 1002px;
+  margin: 0 auto;
+  padding: 0 19px 19px;
+}
+.grid .group {
+  clear: both;
+}
+.grid .group header {
+  margin: 19px 0;
+}
+.grid .group header h1 {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  padding: 6px 14px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: white;
+  font-size: 24px;
+  background: url('/images/patterns/bg_gray_diagonal.png?1325623130');
+}
+.grid .group header h1 {
+  *display: inline;
+}
+.grid .box {
+  position: relative;
+  display: block;
+  display: inline;
+  float: left;
+  width: 212px;
+  min-height: 24px;
+  margin: 0 16px 16px 0;
+  padding: 12px 12px 7px;
+  background: white;
+  border: 1px solid #cdcdcd;
+  -moz-box-shadow: 0 0 1px 0 rgba(128, 128, 128, 0.5);
+  -webkit-box-shadow: 0 0 1px 0 rgba(128, 128, 128, 0.5);
+  -o-box-shadow: 0 0 1px 0 rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 1px 0 rgba(128, 128, 128, 0.5);
+}
+.grid .box header {
+  position: absolute;
+  top: 5px;
+  left: -6px;
+  height: 34px;
+  padding: 5px 10px 0 8px;
+  font-family: "Conv_FF_DIN_Condensed_Medium", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: #232323;
+  font-size: 14px;
+  background: url('/images/patterns/bg_green_header.png?1325632611') top left no-repeat;
+}
+.grid .box .body {
+  font-family: "Arial", "Sans-serif";
+  color: #343434;
+  font-size: 13px;
+}
+.grid .box .thumbnail {
+  position: relative;
+  width: 212px;
+}
+.grid .box .thumbnail .image {
+  display: block;
+  line-height: 0;
+}
+.grid .box .thumbnail .image img {
+  width: 212px;
+}
+.grid .box .thumbnail .edit {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 19px;
+  padding-top: 7px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  background: #222222;
+}
+.grid .box .thumbnail p {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  padding: 6px 8px 7px;
+  font-family: "Arial", "Sans-serif";
+  font-size: 11px;
+  line-height: 15px;
+  color: white;
+  background: #222222;
+}
+.grid .box footer {
+  overflow: hidden;
+  *zoom: 1;
+  padding-top: 8px;
+}
+.grid .box footer a {
+  padding-left: 17px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: #656565;
+  font-size: 12px;
+  text-decoration: none;
+}
+.grid .box footer .comment {
+  display: inline;
+  float: left;
+  background: url('/images/icons/16px/comment.png?1325623661') top left no-repeat;
+}
+.grid .box footer .like {
+  display: inline;
+  float: right;
+  background: url('/images/icons/16px/like.png?1325623661') top left no-repeat;
+}
+
+.box.links li {
+  display: block;
+  float: left;
+  margin: 0 7px 7px 0;
+}
+.box.links li a {
+  width: 24px;
+  height: 24px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.box.links li.about a {
+  background: url('/images/icons/social/aboutme.png?1319748689');
+}
+.box.links li.blogger a {
+  background: url('/images/icons/social/blogger.png?1319748689');
+}
+.box.links li.facebook a {
+  background: url('/images/icons/social/facebook.png?1319748689');
+}
+.box.links li.flickr a {
+  background: url('/images/icons/social/flickr.png?1319748689');
+}
+.box.links li.google a {
+  background: url('/images/icons/social/google_plus.png?1319748689');
+}
+.box.links li.linked_in a {
+  background: url('/images/icons/social/linkedin.png?1319748689');
+}
+.box.links li.pinterest a {
+  background: url('/images/icons/social/pinterest.png?1319748689');
+}
+.box.links li.portfolio a {
+  background: url('/images/icons/social/portfolio.png?1319748689');
+}
+.box.links li.tumblr a {
+  background: url('/images/icons/social/tumblr.png?1319748689');
+}
+.box.links li.twitter a {
+  background: url('/images/icons/social/twitter.png?1319748689');
+}
+.box.links li.website a {
+  background: url('/images/icons/social/website.png?1319748689');
+}
+.box.links li.wordpress a {
+  background: url('/images/icons/social/wordpress.png?1319748689');
+}
+
+.box.with_header {
+  padding-top: 40px;
+}
+
 nav.page {
   height: 37px;
   padding: 0 19px;
@@ -168,6 +342,10 @@ nav.page a.button.small {
 .cover {
   height: 282px;
   padding: 19px;
+  -moz-box-shadow: 0 3px 5px 0 rgba(128, 128, 128, 0.4);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(128, 128, 128, 0.4);
+  -o-box-shadow: 0 3px 5px 0 rgba(128, 128, 128, 0.4);
+  box-shadow: 0 3px 5px 0 rgba(128, 128, 128, 0.4);
 }
 .cover .user {
   display: inline-block;
@@ -217,4 +395,30 @@ nav.page a.button.small {
 .cover .user .badge {
   display: inline;
   float: right;
+}
+
+body.profile #page {
+  background: #f3f3f3;
+}
+body.profile .imagery {
+  overflow: hidden;
+  *zoom: 1;
+  display: inline;
+  float: left;
+  width: 762px;
+}
+body.profile .imagery .boxes {
+  position: relative;
+  left: 1px;
+  width: 762px;
+}
+body.profile .personal {
+  display: inline;
+  float: right;
+  width: 240px;
+  padding-top: 74px;
+}
+body.profile .personal .box {
+  position: relative;
+  left: 1px;
 }
