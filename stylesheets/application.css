@@ -618,7 +618,6 @@ body.profile .imagery {
   *zoom: 1;
   display: inline;
   float: left;
-  display: none;
   width: 762px;
 }
 body.profile .imagery .boxes {
@@ -628,7 +627,7 @@ body.profile .imagery .boxes {
 }
 body.profile .personal {
   display: inline;
-  float: left;
+  float: right;
   width: 240px;
   padding-top: 74px;
 }

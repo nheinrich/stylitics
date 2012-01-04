@@ -13,11 +13,16 @@ $(function(){
     // fade in/out masonry brick data
     $(".box").hover(
       function(){
-        $(this).find(".thumbnail > p, a.edit").stop().fadeIn(300);
+        var $this = $(this)
+        var opacity = $this.css("opacity")
+        console.log(opacity)
+        if (opacity > 0 && opacity != 1 ) $this.css("opacity", 0)
+        $(this).find(".thumbnail p, a.edit").stop().fadeIn(200);
       },
       function(){
-        $(this).find(".thumbnail > p, a.edit").stop().fadeOut(300, function(){
-          $(this).css("opacity", 1); // prevents effects tracking (jquery 1.7)
+        $(this).find(".thumbnail p, a.edit").stop().fadeOut(50, function(){
+          // prevents effects tracking (jquery 1.7)
+          $(this).css("opacity", 1); 
         })
       }
     );
