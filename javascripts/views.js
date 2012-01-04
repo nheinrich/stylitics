@@ -13,10 +13,6 @@ $(function(){
     // fade in/out masonry brick data
     $(".box").hover(
       function(){
-        var $this = $(this)
-        var opacity = $this.css("opacity")
-        console.log(opacity)
-        if (opacity > 0 && opacity != 1 ) $this.css("opacity", 0)
         $(this).find(".thumbnail p, a.edit").stop().fadeIn(200);
       },
       function(){
