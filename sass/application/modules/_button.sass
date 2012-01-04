@@ -1,11 +1,27 @@
 a.button
   +inline-block
-  +din-regular
-  text-decoration: none
+  +din-medium
   color: #4c4b4b
-  +background-image(linear-gradient(#cecece, #f7f7f7))
+  font-size: 14px
+  text-decoration: none
+  +single-text-shadow(rgba(255, 255, 255, .7), 1px, 1px, 0)
+  +background-image(linear-gradient(#f7f7f7, #cecece))
   +border-radius(6px)
   border: 1px solid #bebebe
-  
+
+
+// size specific variations --------------------------------------------------
+
 a.button.small
-  padding: 4px 8px
+  padding: 4px 10px 3px
+
+
+// context specific variations -----------------------------------------------
+
+a.button.random
+  padding-right: 0
+  span
+    padding-right: 36px
+    background: image-url("icons/buttons/shuffle.png") right 1px no-repeat
+
+a.button.share

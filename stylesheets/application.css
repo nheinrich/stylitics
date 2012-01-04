@@ -517,16 +517,18 @@ a.button {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "Conv_FF_DIN_Condensed_Medium", "Arial", "Sans-serif";
   text-transform: uppercase;
-  text-decoration: none;
   color: #4c4b4b;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cecece), color-stop(100%, #f7f7f7));
-  background-image: -webkit-linear-gradient(#cecece, #f7f7f7);
-  background-image: -moz-linear-gradient(#cecece, #f7f7f7);
-  background-image: -o-linear-gradient(#cecece, #f7f7f7);
-  background-image: -ms-linear-gradient(#cecece, #f7f7f7);
-  background-image: linear-gradient(#cecece, #f7f7f7);
+  font-size: 14px;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.7) 1px 1px 0;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(100%, #cecece));
+  background-image: -webkit-linear-gradient(#f7f7f7, #cecece);
+  background-image: -moz-linear-gradient(#f7f7f7, #cecece);
+  background-image: -o-linear-gradient(#f7f7f7, #cecece);
+  background-image: -ms-linear-gradient(#f7f7f7, #cecece);
+  background-image: linear-gradient(#f7f7f7, #cecece);
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   -o-border-radius: 6px;
@@ -540,7 +542,15 @@ a.button {
 }
 
 a.button.small {
-  padding: 4px 8px;
+  padding: 4px 10px 3px;
+}
+
+a.button.random {
+  padding-right: 0;
+}
+a.button.random span {
+  padding-right: 36px;
+  background: url('/images/icons/buttons/shuffle.png?1325716033') right 1px no-repeat;
 }
 
 nav.page {
@@ -549,7 +559,7 @@ nav.page {
   background: #f3f3f3;
 }
 nav.page a.button.small {
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
 .cover {
