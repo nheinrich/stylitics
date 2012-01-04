@@ -5,7 +5,7 @@
   width: 1002px
   margin: 0 auto
   padding: 0 19px 19px
-  
+
   .group
     clear: both
     header
@@ -40,10 +40,27 @@
       color: $txt_gray_dark
       font-size: 14px
       background: image-url("patterns/bg_green_header.png") top left no-repeat
+    .edit
+      display: none
+      position: absolute
+      top: 5px
+      right: 0
+      width: 40px
+      height: 18px
+      padding-top: 6px
+      +din-regular
+      color: $txt_white
+      font-size: 13px
+      line-height: 1em
+      text-align: center
+      text-decoration: none
+      background: #222
     .body
+      padding-bottom: 8px
       +arial
       color: #343434
       font-size: 13px
+      line-height: 1.5em
     .thumbnail
       position: relative
       width: 212px
@@ -53,19 +70,11 @@
         img
           width: 212px
       .edit
-        display: none
-        position: absolute
         top: 0
         right: 0
         width: 40px
         height: 19px
         padding-top: 7px
-        +din-regular
-        color: $txt_white
-        font-size: 13px
-        text-align: center
-        text-decoration: none
-        background: #222
       p
         display: none
         position: absolute
@@ -76,6 +85,75 @@
         line-height: 15px
         color: $txt_white
         background: #222
+    form
+      display: none
+      label
+        display: block
+        margin-bottom: 5px
+        +arial
+        color: #888
+        font-size: 12px
+        font-style: italic
+        line-height: 1.4em
+        &.hint
+          color: $txt_gray_dark
+          margin-bottom: 8px
+          font-style: normal
+      input
+        width: 202px
+        height: 16px
+        margin-bottom: 6px
+        padding: 3px 4px 4px
+        color: #444
+        background: #fcfcfc
+        border: 1px solid #cdcdcd
+        +single-box-shadow(rgba(0, 0, 0, .2), 0, 0, 1px, 0, inset)
+      textarea
+        width: 202px
+        min-height: 50px
+        margin-bottom: 6px
+        padding: 4px
+        color: #444
+        line-height: 1.4em
+        background: #fcfcfc
+        border: 1px solid #cdcdcd
+        +single-box-shadow(rgba(0, 0, 0, .2), 0, 0, 1px, 0, inset)
+      .add
+        display: block
+        margin-bottom: 12px
+        +arial
+        color: $txt_green
+        font-size: 12px
+        font-weight: bold
+        text-decoration: none
+        +hover-link
+      fieldset
+        label
+          margin-bottom: 2px
+        input
+          margin-bottom: 10px
+      fieldset.template
+        display: none
+      fieldset.buttons
+        padding: 5px 0 4px
+        button
+          margin-right: 8px
+          padding: 5px 15px
+          +din-regular
+          color: $txt_white
+          font-size: 13px
+          cursor: pointer
+          background: #1f1f1f
+          +border-radius(3px)
+          border: 0
+          &:hover
+            background: $bg_green
+        .cancel
+          +arial
+          color: $txt_gray_dark
+          font-size: 12px
+          text-decoration: none
+          +hover-link
     footer
       +clearfix
       padding-top: 8px
@@ -96,13 +174,17 @@
 // box (specific variations) -------------------------------------------------
 
 .box.links
-  li 
+  ul
+    margin-right: -7px
+  li
     display: block
     float: left
     margin: 0 7px 7px 0
     a
+      display: block
       width: 24px
       height: 24px
+      +hide-text
       background-position: top left
       background-repeat: no-repeat
   li.about a
@@ -110,34 +192,104 @@
   li.blogger a
     background: image-url("icons/social/blogger.png")
   li.facebook a
-    background: image-url("icons/social/facebook.png")  
+    background: image-url("icons/social/facebook.png")
   li.flickr a
     background: image-url("icons/social/flickr.png")
   li.google a
-    background: image-url("icons/social/google_plus.png")  
+    background: image-url("icons/social/google_plus.png")
   li.linked_in a
-    background: image-url("icons/social/linkedin.png")  
+    background: image-url("icons/social/linkedin.png")
   li.pinterest a
-    background: image-url("icons/social/pinterest.png")  
+    background: image-url("icons/social/pinterest.png")
   li.portfolio a
-    background: image-url("icons/social/portfolio.png")  
+    background: image-url("icons/social/portfolio.png")
   li.tumblr a
-    background: image-url("icons/social/tumblr.png")  
+    background: image-url("icons/social/tumblr.png")
   li.twitter a
-    background: image-url("icons/social/twitter.png")  
+    background: image-url("icons/social/twitter.png")
   li.website a
-    background: image-url("icons/social/website.png")  
+    background: image-url("icons/social/website.png")
   li.wordpress a
-    background: image-url("icons/social/wordpress.png")  
+    background: image-url("icons/social/wordpress.png")
 
-.box.purchases
+.box.products
+  .body
+    padding-top: 2px
+    li
+      +clearfix
+      display: block
+      clear: both
+      margin-bottom: 12px
+      &:last-child
+        margin-bottom: 6px
+      figure
+        +float-left
+        margin-right: 10px
+        padding: 1px
+        border: 1px solid #dcdcdc
+      img
+        display: block
+        width: 40px
+        height: 40px
+      figcaption
+        +float-left
+        max-width: 155px
+        padding-top: 5px
+      a
+        display: block
+        color: #343434
+        text-decoration: none
+        line-height: 1.2em
+        +hover-link
+      span a
+        display: block
+        clear: both
+        color: #a3a3a3
+        font-size: 11px
+        text-decoration: underline
+        &:hover
+          color: #343434
 
 .box.seeking
+  .body
+    ul
+      list-style: disc
+      list-style-position: inside
+    li
+      margin-bottom: 12px
+      &:last-child
+        margin-bottom: 6px
 
 .box.sites
-
-.box.text
-
+  .body
+    li
+      margin-bottom: 12px
+      &:last-child
+        margin-bottom: 6px
+      a
+        display: block
+        color: #343434
+        text-decoration: none
+        line-height: 1.2em
+      span
+        display: block
+        clear: both
+        color: #a3a3a3
+        font-size: 11px
+        text-decoration: underline
+        
+.box.sites, .box.seeking
+  form
+    fieldset
+      padding: 10px 0
+      border-top: 1px solid #cdcdcd
+      input
+        margin-bottom: 5px
+    fieldset:nth-child(2)
+      border-top: 0
+    fieldset.buttons
+      padding-top: 12px
+      
 .box.with_header
   padding-top: 40px
 
