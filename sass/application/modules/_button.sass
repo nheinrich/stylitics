@@ -1,13 +1,17 @@
 a.button
   +inline-block
+  padding: 5px 12px 4px
   +din-medium
   color: #4c4b4b
-  font-size: 14px
+  font-size: 18px
   text-decoration: none
   +single-text-shadow(rgba(255, 255, 255, .7), 1px, 1px, 0)
   +background-image(linear-gradient(#f7f7f7, #cecece))
   +border-radius(6px)
   border: 1px solid #bebebe
+  span
+    display: block
+    height: 20px
   &:hover
     color: #fff
     +single-text-shadow(rgba(76, 75, 75, .7), 1px, 1px, 0)
@@ -15,12 +19,21 @@ a.button
     border: 1px solid #37b300
     
 
+// color specific variations -------------------------------------------------
+
+a.button.highlight
+  color: #fff
+  +single-text-shadow(rgba(76, 75, 75, .7), 1px, 1px, 0)
+  +background-image(linear-gradient(#8ef063, #3abc00))
+  border: 1px solid #37b300
+  
+
 // size specific variations --------------------------------------------------
 
 a.button.small
   height: 15px
   padding: 4px 10px 3px
-
+  font-size: 14px
 
 // context specific variations -----------------------------------------------
 

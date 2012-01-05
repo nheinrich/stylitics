@@ -1,0 +1,37 @@
+// forms.light ---------------------------------------------------------------
+// alterations to forms.light styling for popups
+
+.popup form.light
+  padding: 14px 14px 5px
+  display: block
+  fieldset
+    margin-bottom: 10px
+  fieldset.buttons
+    padding: 8px 0 0
+    button
+      padding: 6px 20px
+      font-size: 18px
+
+
+// add imagery ---------------------------------------------------------------
+// form to add imagery to profile
+
+#add_imagery
+  display: none
+
+// TODO: could possibly work as a generic '.popup form.light' style
+.popup .add_imagery
+  form.light
+    label
+      color: $txt_gray_dark
+      font-style: normal
+      span
+        color: #888
+        font-style: italic
+      span.tip
+        display: block
+    input, textarea
+      width: 400px
+    select
+      width: 410px
+      margin-bottom: 12px

@@ -1,0 +1,55 @@
+// dropdown ------------------------------------------------------------------
+// note: also controlled via a javascript object (modules/dropdown.js)
+
+.dropdown
+  z-index: 2
+  a.button
+    padding: 0
+    &:hover
+      color: #4c4b4b
+      +single-text-shadow(rgba(255, 255, 255, .7), 1px, 1px, 0)
+      +background-image(linear-gradient(#f7f7f7, #cecece))
+      border: 1px solid #bebebe
+    span
+      padding: 5px 12px 4px
+    span.text
+      +float-left
+      height: 20px
+      border-right: 1px solid #bebebe
+    span.arrow
+      +float-right
+      width: 20px
+      height: 29px
+      padding: 0
+      padding-left: 6px
+      background: image-url("icons/buttons/arrow-down.png") right 11px no-repeat
+      border-left: 1px solid #fff
+  ul
+    display: none
+    +border-bottom-radius(6px)
+    border: 1px solid #bebebe
+    border-top: 0
+    li
+      display: block
+      padding: 5px 0 5px 12px
+      background: #eee
+      border-top: 1px solid #f7f7f7
+      border-bottom: 1px solid $border_gray_light
+      &:first-child
+        border-top: 0
+      &:last-child
+        +border-bottom-radius(6px)
+        border-bottom: 0
+      a
+        display: block
+        +din-regular
+        color: #666
+        text-decoration: none
+      &:hover
+        background: #fff
+
+.dropdown.active
+  +border-radius(6px)
+  +single-box-shadow(rgba(0, 0, 0, .2), 0, 0, 1px, 0)
+  .button
+    +border-bottom-radius(0)

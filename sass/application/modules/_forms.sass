@@ -1,0 +1,88 @@
+// forms ---------------------------------------------------------------------
+
+// light ---------------------------------------------------------------------
+// used on white/light backgrounds
+
+form.light
+  legend
+    margin-bottom: 24px
+    +din-regular
+    color: $txt_gray_dark
+    font-size: 24px
+  label
+    display: block
+    margin-bottom: 5px
+    +arial
+    color: #888
+    font-size: 12px
+    font-style: italic
+    line-height: 1.4em
+    &.hint
+      color: $txt_gray_dark
+      margin-bottom: 8px
+      font-style: normal
+    &.required:before
+      content: "*"
+      color: $txt_green      
+  input
+    width: 202px
+    height: 16px
+    margin-bottom: 6px
+    padding: 3px 4px 4px
+    color: #444
+    background: #fcfcfc
+    border: 1px solid #cdcdcd
+    +single-box-shadow(rgba(0, 0, 0, .2), 0, 0, 1px, 0, inset)
+    &[type="file"]
+      margin-top: 2px
+  textarea
+    width: 202px
+    min-height: 50px
+    margin-bottom: 6px
+    padding: 4px
+    color: #444
+    line-height: 1.4em
+    background: #fcfcfc
+    border: 1px solid #cdcdcd
+    +single-box-shadow(rgba(0, 0, 0, .2), 0, 0, 1px, 0, inset)
+  .add
+    display: block
+    margin-bottom: 12px
+    +arial
+    color: $txt_green
+    font-size: 12px
+    font-weight: bold
+    text-decoration: none
+    +hover-link
+  fieldset
+    label
+      margin-bottom: 2px
+    input
+      margin-bottom: 10px
+  fieldset.template
+    display: none
+  fieldset.buttons
+    padding: 5px 0 4px
+    button
+      margin-right: 8px
+      padding: 5px 15px
+      +din-regular
+      color: $txt_white
+      font-size: 13px
+      cursor: pointer
+      background: #1f1f1f
+      +border-radius(3px)
+      border: 0
+      &:hover
+        background: $bg_green
+    .cancel
+      +arial
+      color: $txt_gray_dark
+      font-size: 12px
+      text-decoration: none
+      +hover-link
+
+// dark ----------------------------------------------------------------------
+// used on black/dark backgrounds
+
+form.dark

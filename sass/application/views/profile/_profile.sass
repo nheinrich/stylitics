@@ -1,0 +1,78 @@
+// modular -------------------------------------------------------------------
+// note: currently profile specific but built modularly
+
+// cover
+
+body.profile
+  .cover
+    height: 282px
+    padding: 19px
+    +single-box-shadow(rgba(128, 128, 128, .4), 0, 3px, 5px, 0)
+    .user
+      display: inline-block
+      padding: 12px
+      background: rgba(0, 0, 0, .85)
+      img
+        +float-left
+        width: 114px
+        height: 114px
+        margin-right: 12px
+      .info
+        +float-left
+      header
+        +float-left
+        clear: both
+        margin: 0 24px 7px 0
+      h1, h2
+        +din-regular
+      h1
+        color: $txt_white
+        font-size: 30px
+        margin-bottom: 3px
+      h2
+        color: $txt_gray_medium
+        font-size: 24px
+      .quote
+        display: block
+        clear: left
+        max-width: 320px
+        padding: 5px 0 0 27px
+        line-height: 1.4em
+        background: image-url("icons/quote.png") top left no-repeat
+        +museo-slab-italic
+        color: $txt_gray_light
+      .badge
+        +float-right
+
+
+// profile -------------------------------------------------------------------
+// note: styles specific to profile only
+
+body.profile
+  #page
+    background: #f3f3f3
+  .imagery
+    +clearfix
+    +float-left
+    width: 762px
+    .boxes
+      position: relative
+      left: 1px
+      width: 762px
+  .highlight
+    margin-top: 2px
+
+  .personal
+    position: relative
+    +float-right
+    width: 240px
+    padding-top: 74px
+    .dropdown
+      position: absolute
+      top: 21px
+      right: 1px
+    .box
+      position: relative
+      left: 1px
+    form.light
+      display: none

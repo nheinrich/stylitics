@@ -14,10 +14,6 @@
 
   <link href="stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
 
-  <script src="javascripts/libs/jquery-1.7.1.min.js" type="text/javascript"></script>
-  <script src="javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
-  <script src="javascripts/libs/jquery.imagesloaded.js" type="text/javascript"></script>
-
   <!--[if lte IE 9]>
     <link href="stylesheets/application/browsers/ie.css" media="screen" rel="stylesheet" type="text/css" />
   <![endif]-->
@@ -70,12 +66,15 @@
           <div class="group style_inspiration">
             <header>
               <h1>Style Inspiration</h1>
+              <a href="#add_imagery" class="button highlight" rel="facebox[.add_imagery]">
+                <span>Add Image to Profile</span>
+              </a>
             </header>
             <ul class="boxes">
               <li class="box">
                 <div class="thumbnail">
                   <a href="view/id" class="image">
-                    <img src="http://lorempixel.com/212/170/fashion" />
+                    <img src="http://lorempixel.com/212/170/fashion/212px-wide" />
                   </a>
                   <p>
                     I love this necklace and how the color of
@@ -390,10 +389,24 @@
         </div>
 
         <div class="personal">
-          <a href="/profile/random" class="button small random">
-            <span>Explore Profiles</span>
-          </a>
-          
+          <div class="dropdown">
+            <a href="javascript:void(0)" class="button share">
+              <span class="text">Share</span>
+              <span class="arrow"></span>
+            </a>
+            <ul>
+              <li class="facebook">
+                <a href="javascript:void(0)">Facebook</a>
+              </li>
+              <li class="twitter">
+                <a href="javascript:void(0)">Twitter</a>
+              </li>
+              <li class="email">
+                <a href="javascript:void(0)">Email</a>
+              </li>
+            </ul>
+          </div>
+
           <ul>
             <li class="box with_header text">
               <header>Today my style is...</header>
@@ -401,7 +414,7 @@
                 <a href="javascript:void(0)" class="edit">edit</a>
                 <p>Recovering from New Years.</p>
               </div>
-              <form>
+              <form class="light">
                 <textarea>Recovering from New Years.</textarea>
                 <fieldset class="buttons">
                   <button class="submit">Save</button>
@@ -452,7 +465,7 @@
                   </li>
                 </ul>
               </div>
-              <form>
+              <form class="light">
                 <label class="hint">
                   Add your URLs for the supported sites below. If a URL is
                   left blank it will not be added to your profile.
@@ -554,7 +567,7 @@
                   </li>
                 </ul>
               </div>
-              <form>
+              <form class="light">
                 <label class="hint">
                   Enter your favorite fashion sites below.
                 </label>
@@ -585,7 +598,7 @@
                 <a href="javascript:void(0)" class="edit">edit</a>
                 <p>Funky, Monkey, Crunky, Spunky, Trunky</p>
               </div>
-              <form>
+              <form class="light">
                 <input type="text" value="Funky" />
                 <input type="text" value="Monkey" />
                 <input type="text" value="Crunky" />
@@ -603,7 +616,7 @@
                 <a href="javascript:void(0)" class="edit">edit</a>
                 <p>$2500 a month</p>
               </div>
-              <form>
+              <form class="light">
                 <input type="text" value="$2500 a month" />
                 <fieldset class="buttons">
                   <button class="submit">Save</button>
@@ -620,14 +633,14 @@
                   Honestly, I could really, really use another closet.
                 </p>
               </div>
-              <form>
+              <form class="light">
                 <textarea>A whirlwind of fabric and a total work in progress. Honestly, I could really, really use another closet.</textarea>
                 <fieldset class="buttons">
                   <button class="submit">Save</button>
                   <a href="javascript:void(0)" class="cancel">Cancel</a>
                 </fieldset>
               </form>
-              
+
             </li>
             <li class="box with_header products">
               <header>My Next Three Purchases</header>
@@ -637,7 +650,7 @@
                   <li>
                     <figure>
                       <a href="http://www.jcrew.com/mens_category/sweaters/merino/PRDOVR~46710/46710.jsp" target="_blank">
-                        <img src="http://lorempixel.com/40/40/fashion" />
+                        <img src="http://lorempixel.com/40/40/fashion/40px" />
                       </a>
                     </figure>
                     <figcaption>
@@ -687,15 +700,15 @@
                   </li>
                 </ul>
               </div>
-              <form>
+              <form class="light">
                 <label style="color: red;">
                   Is this going to use the "Add Item" back-end?
                 </label>
                 <fieldset class="buttons">
                   <button class="submit">Save</button>
                   <a href="javascript:void(0)" class="cancel">Cancel</a>
-                </fieldset>                
-              </form>              
+                </fieldset>
+              </form>
             </li>
             <li class="box with_header seeking">
               <header>Stylishly Seeking</header>
@@ -716,7 +729,7 @@
                   </li>
                 </ul>
               </div>
-              <form>
+              <form class="light">
                 <label class="hint">
                   Items that you are seeking that you haven't been able to
                   find.
@@ -739,9 +752,9 @@
               </form>
             </li>
           </ul>
-
         </div>
-      </section>
+
+      </section> <!-- .grid -->
 
     </div> <!-- #page -->
 
@@ -750,7 +763,208 @@
     </footer>
   </div>
 
+  <!-- TODO: pull this in as a partial once we are in Rails -->
+  <!-- popup: add imagery / upload form -->
+  <div id="add_imagery">
+    <form class="light">
+      <legend>Add Image to Profile</legend>
+      <fieldset>
+        <label>
+          Title <span>- displayed in expanded view</span>
+        </label>
+        <input type="text" />
+      </fieldset>
+      <fieldset>
+        <label>
+          Description <span>- displayed in expanded view</span>
+        </label>
+        <textarea></textarea>
+      </fieldset>
+      <fieldset>
+        <label>
+          Caption <span>- displayed when thumbnail is hovered</span>
+        </label>
+        <textarea></textarea>
+      </fieldset>
+      <fieldset>
+        <label class="required">
+          Section
+        </label>
+        <select>
+          <option selected>Which section should this image be added to?</option>
+          <option>Style Inspiration</option>
+          <option>Favorite Brands</option>
+          <option>Favorite Stores</option>
+          <option>Recent Purchases</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <label class="required">
+          Image
+        </label>
+        <input type="file">
+      </fieldset>
+      <fieldset class="buttons">
+        <button class="submit">Save</button>
+        <a href="javascript:void(0)" class="cancel">Cancel</a>
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- TODO: pull this in as a partial once we are in Rails -->
+  <!-- popup: image expanded view -->
+  <div id="view_imagery">
+    <header>
+      <h1>Optional image title added by user upon upload</h1>
+      <a href="like/id" class="like">like</a>
+    </header>
+    <figure>
+      <img src="http://lorempixel.com/1000/1000/fashion/large-image-constrained-by-css" />
+      <ul>
+        <li>
+          <a href="next/image" class="next">Next</a>
+          <a href="prev/image" class="prev">Previous</a>
+        </li>
+      </ul>
+    </figure>
+    <figcaption>
+      <h2>Description</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </figcaption>
+    <section class="comments">
+      <h1>
+        Comments (<span>9</span>)
+      </h1>
+      <ul>
+        <li>
+          <a href="/user/profile" class="user small">
+            <img src="http://lorempixel.com/28/28/fashion/28px" />
+          </a>
+          <div class="details">
+            <p>
+              <a href="/user/profile">Andrej Pejic</a>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="/user/profile" class="user small">
+            <img src="http://lorempixel.com/28/28/fashion/28px" />
+          </a>
+          <div class="details">
+            <p>
+              <a href="/user/profile">Anna Dello Russo</a>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="/user/profile" class="user small">
+            <img src="http://lorempixel.com/28/28/fashion/28px" />
+          </a>
+          <div class="details">
+            <p>
+              <a href="/user/profile">Anna Wintour</a>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="/user/profile" class="user small">
+            <img src="http://lorempixel.com/28/28/fashion/28px" />
+          </a>
+          <div class="details">
+            <p>
+              <a href="/user/profile">Levi Strauss</a>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="/user/profile" class="user small">
+            <img src="http://lorempixel.com/28/28/fashion/28px" />
+          </a>
+          <div class="details">
+            <p>
+              <a href="/user/profile">Hubert de Givenchy</a>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="/user/profile" class="user small">
+            <img src="http://lorempixel.com/28/28/fashion/28px" />
+          </a>
+          <div class="details">
+            <p>
+              <a href="/user/profile">Coco Chanel</a>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="/user/profile" class="user small">
+            <img src="http://lorempixel.com/28/28/fashion/28px" />
+          </a>
+          <div class="details">
+            <p>
+              <a href="/user/profile">Louis Vuitton</a>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="/user/profile" class="user small">
+            <img src="http://lorempixel.com/28/28/fashion/28px" />
+          </a>
+          <div class="details">
+            <p>
+              <a href="/user/profile">Donatella Versace</a>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="/user/profile" class="user small">
+            <img src="http://lorempixel.com/28/28/fashion/28px" />
+          </a>
+          <div class="details">
+            <p>
+              <a href="/user/profile">Marc Jacobs</a>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="add_comment">
+        <h2>Add a Comment</h2>
+        <a href="/user/profile" class="user small">
+          <img src="http://lorempixel.com/28/28/fashion/28px" />
+        </a>
+        <form class="dark">
+          <textarea>Leave a Comment</textarea>
+          <fieldset class="buttons">
+            <button class="submit">Save</button>
+            <a href="javascript:void(0)" class="cancel">Cancel</a>
+          </fieldset>          
+        </form>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- TODO: upon Rails integration use sprockets to compress/zip these -->
+  <!-- libraries -->
+  <script src="javascripts/libs/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+  <script src="javascripts/libs/jquery.imagesloaded.js" type="text/javascript"></script>
+  <script src="javascripts/libs/facebox.js" type="text/javascript"></script>
+  <!-- application -->
   <script src="javascripts/application.js"></script>
-  <script src="javascripts/views.js"></script>
+  <script src="javascripts/modules/dropdown.js"></script>
+  <script src="javascripts/views/profile.js"></script>
+
 </body>
 </html>
