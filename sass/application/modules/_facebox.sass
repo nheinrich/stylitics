@@ -7,14 +7,15 @@
 
   .popup
     position: relative
+    margin-bottom: 100px    
     border: 3px solid rgba(0,0,0,0)
     +border-radius(5px)
     +single-box-shadow(rgba(0,0,0,0.4), 0px, 0px, 18px)
 
   .content
-    display: table
-    width: 370px
-    padding: 10px
+    display: block
+    // set your own width on a per popup basis
+    padding: 24px 24px 15px
     background: #fff
     +border-radius(4px)
     > p:first-child
@@ -24,14 +25,15 @@
 
   .close
     position: absolute
-    top: 5px
-    right: 8px
+    top: 7px
+    right: 7px
+    width: 8px
+    height: 8px
     padding: 2px
-    background: #fff
-    img
-      opacity: 0.3
-    &:hover img
-      opacity: 1.0
+    background: image-url("facebox/close-light.png") top right no-repeat
+    opacity: .3
+    &:hover
+      opacity: 1
 
   .loading
     text-align: center

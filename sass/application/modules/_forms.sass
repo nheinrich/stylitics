@@ -1,24 +1,22 @@
 // forms ---------------------------------------------------------------------
 
-// light ---------------------------------------------------------------------
-// used on white/light backgrounds
+// light/dark ----------------------------------------------------------------
+// styles common to both light and dark
 
-form.light
+form.light, 
+form.dark
   legend
     margin-bottom: 24px
     +din-regular
-    color: $txt_gray_dark
     font-size: 24px
   label
     display: block
     margin-bottom: 5px
     +arial
-    color: #888
     font-size: 12px
     font-style: italic
     line-height: 1.4em
     &.hint
-      color: $txt_gray_dark
       margin-bottom: 8px
       font-style: normal
     &.required:before
@@ -70,19 +68,45 @@ form.light
       color: $txt_white
       font-size: 13px
       cursor: pointer
-      background: #1f1f1f
       +border-radius(3px)
       border: 0
       &:hover
         background: $bg_green
     .cancel
       +arial
-      color: $txt_gray_dark
       font-size: 12px
       text-decoration: none
       +hover-link
+
+
+// light ---------------------------------------------------------------------
+// used on white/light backgrounds
+
+form.light
+  legend
+    color: $txt_gray_dark
+  label
+    color: #888
+    &.hint
+      color: $txt_gray_dark
+  fieldset.buttons
+    button
+      background: #1f1f1f
+    .cancel
+      color: $txt_gray_dark
 
 // dark ----------------------------------------------------------------------
 // used on black/dark backgrounds
 
 form.dark
+  legend
+    color: $txt_white
+  label
+    color: #888
+    &.hint
+      color: $txt_gray_light
+  fieldset.buttons
+    button
+      background: $bg_green
+    .cancel
+      color: $txt_gray_light

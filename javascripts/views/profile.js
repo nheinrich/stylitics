@@ -16,12 +16,18 @@ app.views.profile = {};
 app.views.profile.init = function(element){
   this.initialize.masonry();
   this.initialize.hovers();
+  this.initialize.captions();
   this.initialize.forms();
   app.dropdown.init();
 }
 
 app.views.profile.initialize = {
-
+  captions:function(){
+    // passes a click to the thumbnail if the caption is clicked
+    $(".thumbnail").on("click", "p", function(){
+      $(this).siblings("a.image").click();
+    })
+  },  
   forms:function(){
     // edit button
     $(".personal a.edit").on("click", function(e){

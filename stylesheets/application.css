@@ -78,8 +78,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-body {
-  height: 100%;
+html {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #ffffff));
   background-image: -webkit-linear-gradient(#000000, #ffffff);
   background-image: -moz-linear-gradient(#000000, #ffffff);
@@ -90,7 +89,11 @@ body {
 
 #layout {
   width: 1040px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
   margin: 0 auto;
+  margin-bottom: -88px;
   overflow: hidden;
 }
 
@@ -100,9 +103,16 @@ body {
   background: url('/images/temp/header.png?1325611863');
 }
 
-#layout > footer {
+#layout_footer {
+  height: 88px;
+}
+
+#footer {
+  clear: both;
+  position: relative;
   width: 1040px;
   height: 88px;
+  margin: 0 auto;
   background: url('/images/temp/footer.png?1325611863');
 }
 
@@ -131,9 +141,10 @@ body {
 }
 .grid .group {
   clear: both;
+  margin-bottom: 19px;
 }
 .grid .group header {
-  margin: 19px 0;
+  margin: 0 0 19px;
 }
 .grid .group header h1 {
   display: -moz-inline-box;
@@ -236,6 +247,7 @@ body {
   line-height: 15px;
   color: white;
   background: #222222;
+  cursor: pointer;
 }
 .grid .box footer {
   overflow: hidden;
@@ -253,12 +265,10 @@ body {
 .grid .box footer .comment {
   display: inline;
   float: left;
-  background: url('/images/icons/16px/comment.png?1325623661') top left no-repeat;
 }
 .grid .box footer .like {
   display: inline;
   float: right;
-  background: url('/images/icons/16px/like.png?1325623661') top left no-repeat;
 }
 
 .box.links ul {
@@ -617,6 +627,7 @@ a.button.random:hover span {
 }
 #facebox .popup {
   position: relative;
+  margin-bottom: 100px;
   border: 3px solid rgba(0, 0, 0, 0);
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -630,9 +641,8 @@ a.button.random:hover span {
   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.4);
 }
 #facebox .content {
-  display: table;
-  width: 370px;
-  padding: 10px;
+  display: block;
+  padding: 24px 24px 15px;
   background: white;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -649,15 +659,15 @@ a.button.random:hover span {
 }
 #facebox .close {
   position: absolute;
-  top: 5px;
-  right: 8px;
+  top: 7px;
+  right: 7px;
+  width: 8px;
+  height: 8px;
   padding: 2px;
-  background: white;
-}
-#facebox .close img {
+  background: url('/images/facebox/close-light.png?1320253384') top right no-repeat;
   opacity: 0.3;
 }
-#facebox .close:hover img {
+#facebox .close:hover {
   opacity: 1;
 }
 #facebox .loading {
@@ -688,32 +698,34 @@ a.button.random:hover span {
   z-index: 99;
 }
 
-form.light legend {
+form.light legend,
+form.dark legend {
   margin-bottom: 24px;
   font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
   text-transform: uppercase;
-  color: #232323;
   font-size: 24px;
 }
-form.light label {
+form.light label,
+form.dark label {
   display: block;
   margin-bottom: 5px;
   font-family: "Arial", "Sans-serif";
-  color: #888888;
   font-size: 12px;
   font-style: italic;
   line-height: 1.4em;
 }
-form.light label.hint {
-  color: #232323;
+form.light label.hint,
+form.dark label.hint {
   margin-bottom: 8px;
   font-style: normal;
 }
-form.light label.required:before {
+form.light label.required:before,
+form.dark label.required:before {
   content: "*";
   color: #32a800;
 }
-form.light input {
+form.light input,
+form.dark input {
   width: 202px;
   height: 16px;
   margin-bottom: 6px;
@@ -726,10 +738,12 @@ form.light input {
   -o-box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
 }
-form.light input[type="file"] {
+form.light input[type="file"],
+form.dark input[type="file"] {
   margin-top: 2px;
 }
-form.light textarea {
+form.light textarea,
+form.dark textarea {
   width: 202px;
   min-height: 50px;
   margin-bottom: 6px;
@@ -743,7 +757,8 @@ form.light textarea {
   -o-box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
 }
-form.light .add {
+form.light .add,
+form.dark .add {
   display: block;
   margin-bottom: 12px;
   font-family: "Arial", "Sans-serif";
@@ -753,22 +768,28 @@ form.light .add {
   text-decoration: none;
   text-decoration: none;
 }
-form.light .add:hover {
+form.light .add:hover,
+form.dark .add:hover {
   text-decoration: underline;
 }
-form.light fieldset label {
+form.light fieldset label,
+form.dark fieldset label {
   margin-bottom: 2px;
 }
-form.light fieldset input {
+form.light fieldset input,
+form.dark fieldset input {
   margin-bottom: 10px;
 }
-form.light fieldset.template {
+form.light fieldset.template,
+form.dark fieldset.template {
   display: none;
 }
-form.light fieldset.buttons {
+form.light fieldset.buttons,
+form.dark fieldset.buttons {
   padding: 5px 0 4px;
 }
-form.light fieldset.buttons button {
+form.light fieldset.buttons button,
+form.dark fieldset.buttons button {
   margin-right: 8px;
   padding: 5px 15px;
   font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
@@ -776,7 +797,6 @@ form.light fieldset.buttons button {
   color: white;
   font-size: 13px;
   cursor: pointer;
-  background: #1f1f1f;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -785,18 +805,74 @@ form.light fieldset.buttons button {
   border-radius: 3px;
   border: 0;
 }
-form.light fieldset.buttons button:hover {
+form.light fieldset.buttons button:hover,
+form.dark fieldset.buttons button:hover {
   background: #4cb321;
 }
-form.light fieldset.buttons .cancel {
+form.light fieldset.buttons .cancel,
+form.dark fieldset.buttons .cancel {
   font-family: "Arial", "Sans-serif";
-  color: #232323;
   font-size: 12px;
   text-decoration: none;
   text-decoration: none;
 }
-form.light fieldset.buttons .cancel:hover {
+form.light fieldset.buttons .cancel:hover,
+form.dark fieldset.buttons .cancel:hover {
   text-decoration: underline;
+}
+
+form.light legend {
+  color: #232323;
+}
+form.light label {
+  color: #888888;
+}
+form.light label.hint {
+  color: #232323;
+}
+form.light fieldset.buttons button {
+  background: #1f1f1f;
+}
+form.light fieldset.buttons .cancel {
+  color: #232323;
+}
+
+form.dark legend {
+  color: white;
+}
+form.dark label {
+  color: #888888;
+}
+form.dark label.hint {
+  color: #cdcdcd;
+}
+form.dark fieldset.buttons button {
+  background: #4cb321;
+}
+form.dark fieldset.buttons .cancel {
+  color: #cdcdcd;
+}
+
+.comment {
+  display: block;
+  padding-left: 17px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: #656565;
+  font-size: 12px;
+  text-decoration: none;
+  background: url('/images/icons/16px/comment.png?1325623661') top left no-repeat;
+}
+
+.like {
+  display: block;
+  padding-left: 17px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: #656565;
+  font-size: 12px;
+  text-decoration: none;
+  background: url('/images/icons/16px/like.png?1325623661') top left no-repeat;
 }
 
 nav.page {
@@ -808,17 +884,20 @@ nav.page a.button.small {
   margin-top: 6px;
 }
 
-.popup form.light {
-  padding: 14px 14px 5px;
+.popup form.light,
+.popup form.dark {
   display: block;
 }
-.popup form.light fieldset {
+.popup form.light fieldset,
+.popup form.dark fieldset {
   margin-bottom: 10px;
 }
-.popup form.light fieldset.buttons {
+.popup form.light fieldset.buttons,
+.popup form.dark fieldset.buttons {
   padding: 8px 0 0;
 }
-.popup form.light fieldset.buttons button {
+.popup form.light fieldset.buttons button,
+.popup form.dark fieldset.buttons button {
   padding: 6px 20px;
   font-size: 18px;
 }
@@ -827,27 +906,236 @@ nav.page a.button.small {
   display: none;
 }
 
-.popup .add_imagery form.light label {
+#facebox.add_imagery .content {
+  width: 410px;
+}
+#facebox.add_imagery .content form.light label {
   color: #232323;
   font-style: normal;
 }
-.popup .add_imagery form.light label span {
+#facebox.add_imagery .content form.light label span {
   color: #888888;
   font-style: italic;
 }
-.popup .add_imagery form.light label span.tip {
+#facebox.add_imagery .content form.light label span.tip {
   display: block;
 }
-.popup .add_imagery form.light input, .popup .add_imagery form.light textarea {
+#facebox.add_imagery .content form.light input, #facebox.add_imagery .content form.light textarea {
   width: 400px;
 }
-.popup .add_imagery form.light select {
+#facebox.add_imagery .content form.light select {
   width: 410px;
   margin-bottom: 12px;
 }
 
+#view_imagery {
+  display: none;
+}
+
+#facebox.view_imagery .popup {
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+#facebox.view_imagery .close {
+  background: url('/images/facebox/close-dark.png?1325806532') top right no-repeat;
+}
+#facebox.view_imagery .content {
+  width: 960px;
+  background: black;
+}
+#facebox.view_imagery .content header {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 18px;
+}
+#facebox.view_imagery .content header h1 {
+  display: inline;
+  float: left;
+  display: block;
+  width: 850px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: white;
+  font-size: 24px;
+}
+#facebox.view_imagery .content header .like {
+  display: inline;
+  float: right;
+  height: 15px;
+  margin-top: 2px;
+  padding: 3px 8px 3px 25px;
+  font-size: 15px;
+  background-color: white;
+  background-position: 7px 4px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+#facebox.view_imagery .content figure {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 30px;
+}
+#facebox.view_imagery .content figure img {
+  max-width: 960px;
+}
+#facebox.view_imagery .content figure li {
+  background: red;
+}
+#facebox.view_imagery .content figure li a {
+  display: inline;
+  float: left;
+  display: block;
+  width: 48.9%;
+  padding: 5px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  background: #171717;
+}
+#facebox.view_imagery .content figure li a:hover {
+  color: #232323;
+  background: #f3f3f3;
+}
+#facebox.view_imagery .content figure li:last-child a {
+  display: inline;
+  float: right;
+  text-align: right;
+}
+#facebox.view_imagery .content figcaption {
+  margin-bottom: 30px;
+}
+#facebox.view_imagery .content figcaption h2 {
+  margin-bottom: 14px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: white;
+  font-size: 24px;
+}
+#facebox.view_imagery .content figcaption p {
+  width: 650px;
+  font-family: "Arial", "Sans-serif";
+  color: #999999;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+#facebox.view_imagery .content .comments h1 {
+  margin-bottom: 22px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: white;
+  font-size: 24px;
+}
+#facebox.view_imagery .content .comments h1 span {
+  color: #999999;
+}
+#facebox.view_imagery .content .comments ul {
+  margin-bottom: 30px;
+}
+#facebox.view_imagery .content .comments li {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+  width: 600px;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #1c1c1c;
+}
+#facebox.view_imagery .content .comments li:last-child {
+  border-bottom: 0;
+}
+#facebox.view_imagery .content .comments a.user.small {
+  display: inline;
+  float: left;
+  margin-right: 14px;
+}
+#facebox.view_imagery .content .comments .details {
+  display: inline;
+  float: left;
+  width: 550px;
+}
+#facebox.view_imagery .content .comments .details p {
+  width: 550px;
+  font-family: "Arial", "Sans-serif";
+  color: #999999;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+#facebox.view_imagery .content .comments .details p a {
+  margin-right: 6px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+#facebox.view_imagery .content .comments .details p a:hover {
+  text-decoration: underline;
+}
+#facebox.view_imagery .content .add_comment {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 30px;
+}
+#facebox.view_imagery .content form.light legend {
+  color: white;
+}
+#facebox.view_imagery .content form.light a.user.small {
+  margin-top: 10px;
+}
+#facebox.view_imagery .content form.light .speech_bubble {
+  display: inline;
+  float: left;
+  position: relative;
+  padding: 20px 20px 10px;
+  background: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+}
+#facebox.view_imagery .content form.light .speech_bubble .triangle {
+  position: absolute;
+  top: 18px;
+  left: -8px;
+  width: 0px;
+  height: 0px;
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid transparent;
+  border-right: 8px solid white;
+  font-size: 0px;
+  line-height: 0px;
+}
+#facebox.view_imagery .content form.light .speech_bubble textarea {
+  width: 504px;
+  min-height: 60px;
+}
+#facebox.view_imagery .content form.light fieldset.buttons {
+  clear: both;
+  padding-bottom: 0;
+}
+
+a.user.small {
+  display: block;
+  width: 28px;
+  height: 28px;
+  padding: 1px;
+  border: 1px solid #999999;
+}
+a.user.small img {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
 body.profile .cover {
   height: 282px;
+  margin-bottom: 19px;
   padding: 19px;
   -moz-box-shadow: 0 3px 5px 0 rgba(128, 128, 128, 0.4);
   -webkit-box-shadow: 0 3px 5px 0 rgba(128, 128, 128, 0.4);

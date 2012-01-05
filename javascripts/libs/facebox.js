@@ -85,7 +85,8 @@
       opacity      : 0.5,
       overlay      : true,
       loadingImage : '/images/facebox/loading.gif',
-      closeImage   : '/images/facebox/closelabel.png',
+      // doing this via CSS so I can swap the color
+      // closeImage   : '/images/facebox/closelabel.png',
       imageTypes   : [ 'png', 'jpg', 'jpeg', 'gif' ],
       faceboxHtml  : '\
     <div id="facebox" style="display:none;"> \
@@ -119,7 +120,7 @@
 
     reveal: function(data, klass) {
       $(document).trigger('beforeReveal.facebox')
-      if (klass) $('#facebox .content').addClass(klass)
+      if (klass) $('#facebox').removeClass().addClass(klass)
       $('#facebox .content').empty().append(data)
       $('#facebox .popup').children().fadeIn('normal')
       $('#facebox').css('left', $(window).width() / 2 - ($('#facebox .popup').outerWidth() / 2))
@@ -175,7 +176,7 @@
     $('body').append($.facebox.settings.faceboxHtml)
 
     var preload = [ new Image(), new Image() ]
-    preload[0].src = $.facebox.settings.closeImage
+    // preload[0].src = $.facebox.settings.closeImage
     preload[1].src = $.facebox.settings.loadingImage
 
     $('#facebox').find('.b:first, .bl').each(function() {
@@ -185,9 +186,9 @@
 
     $('#facebox .close')
       .click($.facebox.close)
-      .append('<img src="'
-              + $.facebox.settings.closeImage
-              + '" class="close_image" title="close">')
+      // .append('<img src="'
+      //         + $.facebox.settings.closeImage
+      //         + '" class="close_image" title="close">')
   }
 
   // getPageScroll() by quirksmode.com
@@ -224,7 +225,7 @@
     var $s = $.facebox.settings
 
     $s.loadingImage = $s.loading_image || $s.loadingImage
-    $s.closeImage = $s.close_image || $s.closeImage
+    // $s.closeImage = $s.close_image || $s.closeImage
     $s.imageTypes = $s.image_types || $s.imageTypes
     $s.faceboxHtml = $s.facebox_html || $s.faceboxHtml
   }

@@ -1,16 +1,25 @@
-// forms.light ---------------------------------------------------------------
-// alterations to forms.light styling for popups
+// forms.light / forms.dark --------------------------------------------------
+// alterations to forms.light and forms.dark for styling for popups
 
-.popup form.light
-  padding: 14px 14px 5px
-  display: block
-  fieldset
-    margin-bottom: 10px
-  fieldset.buttons
-    padding: 8px 0 0
-    button
-      padding: 6px 20px
-      font-size: 18px
+.popup 
+  form.light,
+  form.dark  
+    display: block
+    fieldset
+      margin-bottom: 10px
+    fieldset.buttons
+      padding: 8px 0 0
+      button
+        padding: 6px 20px
+        font-size: 18px
+
+// mixin for dark popups
+
+= dark_popup
+  .popup
+    border: 3px solid rgba(255,255,255,.2)
+  .close
+    background: image-url("facebox/close-dark.png") top right no-repeat
 
 
 // add imagery ---------------------------------------------------------------
@@ -19,19 +28,159 @@
 #add_imagery
   display: none
 
-// TODO: could possibly work as a generic '.popup form.light' style
-.popup .add_imagery
-  form.light
-    label
-      color: $txt_gray_dark
-      font-style: normal
-      span
-        color: #888
-        font-style: italic
-      span.tip
+#facebox.add_imagery 
+  .content
+    width: 410px
+    form.light
+      label
+        color: $txt_gray_dark
+        font-style: normal
+        span
+          color: #888
+          font-style: italic
+        span.tip
+          display: block
+      input, textarea
+        width: 400px
+      select
+        width: 410px
+        margin-bottom: 12px
+
+
+// view imagery --------------------------------------------------------------
+// view expanded view of thumbnail imagery and comments
+
+#view_imagery
+  display: none
+
+#facebox.view_imagery 
+  +dark_popup
+  
+  .content
+    width: 960px
+    background: #000
+    header
+      +clearfix
+      margin-bottom: 18px
+      h1
+        +float-left
         display: block
-    input, textarea
-      width: 400px
-    select
-      width: 410px
-      margin-bottom: 12px
+        width: 850px
+        +din-regular
+        color: $txt_white
+        font-size: 24px
+      .like
+        +float-right
+        height: 15px
+        margin-top: 2px
+        padding: 3px 8px 3px 25px
+        font-size: 15px
+        background-color: $bg_white
+        background-position: 7px 4px
+        +border-radius(3px)
+    figure
+      +clearfix
+      margin-bottom: 30px
+      img
+        max-width: 960px
+      li
+        background: red
+        a
+          +float-left
+          display: block
+          width: 48.9%
+          padding: 5px
+          +din-regular
+          color: $txt_white
+          text-decoration: none
+          background: #171717
+          &:hover
+            color: $txt_gray_dark
+            background: $bg_gray_light
+        &:last-child
+          a
+            +float-right
+            text-align: right
+    figcaption
+      margin-bottom: 30px
+      h2
+        margin-bottom: 14px
+        +din-regular
+        color: $txt_white
+        font-size: 24px
+      p
+        width: 650px
+        +arial
+        color: $txt_gray_medium
+        font-size: 12px
+        font-weight: normal
+        line-height: 1.5em
+    .comments
+      h1
+        margin-bottom: 22px
+        +din-regular
+        color: $txt_white
+        font-size: 24px
+        span
+          color: $txt_gray_medium
+      ul
+        margin-bottom: 30px
+      li
+        +clearfix
+        clear: both
+        width: 600px
+        padding-bottom: 14px
+        margin-bottom: 14px
+        border-bottom: 1px solid #1c1c1c
+        &:last-child
+          border-bottom: 0
+      a.user.small
+        +float-left
+        margin-right: 14px
+      .details
+        +float-left
+        width: 550px
+        p
+          width: 550px
+          +arial
+          color: $txt_gray_medium
+          font-size: 12px
+          font-weight: normal
+          line-height: 1.5em
+          a
+            margin-right: 6px
+            color: $txt_white
+            font-weight: bold
+            +hover-link
+
+    .add_comment
+      +clearfix
+      margin-bottom: 30px
+    form.light
+      legend
+        color: $txt_white
+      a.user.small
+        margin-top: 10px
+      .speech_bubble
+        +float-left
+        position: relative
+        padding: 20px 20px 10px
+        background: $bg_white
+        +border-radius(10px)
+        .triangle
+          position: absolute
+          top: 18px
+          left: -8px
+          width: 0px 
+          height: 0px 
+          border-bottom: 8px solid transparent
+          border-top: 8px solid transparent
+          border-right: 8px solid $bg_white
+          font-size: 0px
+          line-height: 0px
+        textarea
+          width: 504px
+          min-height: 60px
+      fieldset.buttons
+        clear: both
+        padding-bottom: 0
