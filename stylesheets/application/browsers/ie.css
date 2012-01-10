@@ -1,0 +1,18 @@
+.pie-element {
+  behavior: url("/stylesheets/application/browsers/PIE.htc");
+  position: relative;
+}
+
+.pie-container, .widget {
+  z-index: 0;
+  position: relative;
+}
+
+.z-pie-element, .widget h3 {
+  behavior: url("/stylesheets/application/browsers/PIE.htc");
+  z-index: 0;
+}
+
+body.ie {
+  background-color: black;
+}

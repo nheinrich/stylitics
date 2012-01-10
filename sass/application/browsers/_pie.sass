@@ -1,10 +1,14 @@
-$legacy-support-for-ie6: true
+@import compass/css3/pie
+@import compass/css3
+
+// legacy support
+$legacy-support-for-ie6: false
 $legacy-support-for-ie7: true
 $legacy-support-for-ie8: true
 
 // this file must be delivered with a mime-type of:
 // text/x-component
-$pie-behavior: url("/stylesheets/app/browsers/PIE.htc")
+$pie-behavior: url("/stylesheets/application/browsers/PIE.htc")
 
 // extends the class below for use with the "+pie" mixin
 $pie-base-class: pie-element

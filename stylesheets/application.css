@@ -79,6 +79,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html {
+  background-color: black;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #ffffff));
   background-image: -webkit-linear-gradient(#000000, #ffffff);
   background-image: -moz-linear-gradient(#000000, #ffffff);
@@ -764,6 +765,7 @@ form.dark textarea {
   min-height: 50px;
   margin-bottom: 6px;
   padding: 4px;
+  font-family: "Arial", "Sans-serif";
   color: #444444;
   line-height: 1.4em;
   background: #fcfcfc;
