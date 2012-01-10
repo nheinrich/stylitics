@@ -55,25 +55,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @font-face {
-  font-family: "Conv_FF_DIN_Condensed_Medium";
-  src: url("../fonts/ff-din-condensed-med/FF_DIN_Condensed_Medium.eot");
-  src: url("../fonts/ff-din-condensed-med/FF_DIN_Condensed_Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/ff-din-condensed-med/FF_DIN_Condensed_Medium.ttf") format("truetype"), url("../fonts/ff-din-condensed-med/FF_DIN_Condensed_Medium.svg#digitaldreamfat") format("svg");
+  font-family: "DINCondMediumRegular";
+  src: url("../fonts/ff-din-condensed-med/ff_din_condensed_medium-webfont.eot");
+  src: url("../fonts/ff-din-condensed-med/ff_din_condensed_medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ff-din-condensed-med/ff_din_condensed_medium-webfont.woff") format("woff"), url("../fonts/ff-din-condensed-med/ff_din_condensed_medium-webfont.ttf") format("truetype"), url("../fonts/ff-din-condensed-med/ff_din_condensed_medium-webfont.svg#DINCondMediumRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Conv_FF_DIN_Condensed_Regular";
-  src: url("../fonts/ff-din-condensed-reg/FF_DIN_Condensed_Regular.eot");
-  src: url("../fonts/ff-din-condensed-reg/FF_DIN_Condensed_Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ff-din-condensed-reg/FF_DIN_Condensed_Regular.ttf") format("truetype"), url("../fonts/ff-din-condensed-reg/FF_DIN_Condensed_Regular.svg#digitaldreamfat") format("svg");
+  font-family: "DINCondRegular";
+  src: url("../fonts/ff-din-condensed-reg/ff_din_condensed_regular-webfont.eot");
+  src: url("../fonts/ff-din-condensed-reg/ff_din_condensed_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ff-din-condensed-reg/ff_din_condensed_regular-webfont.woff") format("woff"), url("../fonts/ff-din-condensed-reg/ff_din_condensed_regular-webfont.ttf") format("truetype"), url("../fonts/ff-din-condensed-reg/ff_din_condensed_regular-webfont.svg#DINCondRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Conv_Museo_Slab_500italic";
-  src: url("../fonts/museo-slab-italic/Museo_Slab_500italic.eot");
-  src: url("../fonts/museo-slab-italic/Museo_Slab_500italic.eot?#iefix") format("embedded-opentype"), url("../fonts/museo-slab-italic/Museo_Slab_500italic.ttf") format("truetype"), url("../fonts/museo-slab-italic/Museo_Slab_500italic.svg#digitaldreamfat") format("svg");
+  font-family: "MuseoSlab500Italic";
+  src: url("../fonts/museo-slab-italic/museo_slab_500italic-webfont.eot");
+  src: url("../fonts/museo-slab-italic/museo_slab_500italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museo-slab-italic/museo_slab_500italic-webfont.woff") format("woff"), url("../fonts/museo-slab-italic/museo_slab_500italic-webfont.ttf") format("truetype"), url("../fonts/museo-slab-italic/museo_slab_500italic-webfont.svg#MuseoSlab500Italic") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -120,7 +120,7 @@ html {
 .badge {
   height: 35px;
   padding-left: 10px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   background: url('/images/badge/left.png?1325619235') top left no-repeat;
@@ -155,7 +155,7 @@ html {
   vertical-align: middle;
   *vertical-align: auto;
   padding: 6px 9px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   font-size: 24px;
@@ -195,7 +195,7 @@ html {
   left: -6px;
   height: 34px;
   padding: 5px 10px 0 8px;
-  font-family: "Conv_FF_DIN_Condensed_Medium", "Arial", "Sans-serif";
+  font-family: "DINCondMediumRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: #232323;
   font-size: 14px;
@@ -209,10 +209,11 @@ html {
   width: 40px;
   height: 18px;
   padding-top: 6px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   font-size: 13px;
+  line-height: 1em;
   text-align: center;
   text-decoration: none;
   background: #222222;
@@ -261,7 +262,7 @@ html {
 }
 .grid .box footer a {
   padding-left: 17px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: #656565;
   font-size: 12px;
@@ -449,7 +450,7 @@ a.button {
   vertical-align: middle;
   *vertical-align: auto;
   padding: 5px 12px 4px;
-  font-family: "Conv_FF_DIN_Condensed_Medium", "Arial", "Sans-serif";
+  font-family: "DINCondMediumRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: #4c4b4b;
   font-size: 18px;
@@ -598,7 +599,7 @@ a.button.random:hover span {
   display: block;
   height: 16px;
   padding: 5px 0 4px 12px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   font-size: 15px;
   color: #666666;
@@ -718,7 +719,7 @@ a.button.random:hover span {
 form.light legend,
 form.dark legend {
   margin-bottom: 24px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   font-size: 24px;
 }
@@ -810,7 +811,7 @@ form.light fieldset.buttons button,
 form.dark fieldset.buttons button {
   margin-right: 8px;
   padding: 5px 15px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   font-size: 13px;
@@ -893,7 +894,7 @@ form.dark fieldset.buttons .cancel {
 .comment {
   display: block;
   padding-left: 17px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: #656565;
   font-size: 12px;
@@ -904,7 +905,7 @@ form.dark fieldset.buttons .cancel {
 .view_comments {
   display: block;
   padding-left: 17px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: #656565;
   font-size: 12px;
@@ -932,7 +933,7 @@ form.dark fieldset.buttons .cancel {
 .like {
   display: block;
   padding-left: 17px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: #656565;
   font-size: 12px;
@@ -1036,7 +1037,7 @@ nav.page aside a:hover {
   float: left;
   display: block;
   width: 700px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   font-size: 24px;
@@ -1079,7 +1080,7 @@ nav.page aside a:hover {
   display: block;
   width: 48.9%;
   padding: 5px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   text-decoration: none;
@@ -1099,7 +1100,7 @@ nav.page aside a:hover {
 }
 #facebox.view_imagery .content figcaption h2 {
   margin-bottom: 14px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   font-size: 24px;
@@ -1114,7 +1115,7 @@ nav.page aside a:hover {
 }
 #facebox.view_imagery .content .comments h1 {
   margin-bottom: 22px;
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   font-size: 24px;
@@ -1255,7 +1256,7 @@ body.profile section.cover .user header {
   margin: 0 24px 7px 0;
 }
 body.profile section.cover .user h1, body.profile section.cover .user h2 {
-  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
 }
 body.profile section.cover .user h1 {
@@ -1274,7 +1275,7 @@ body.profile section.cover .user .quote {
   padding: 5px 0 0 27px;
   line-height: 1.4em;
   background: url('/images/icons/quote.png?1325618598') top left no-repeat;
-  font-family: "Conv_Museo_Slab_500italic", Georgia, Serif;
+  font-family: "MuseoSlab500Italic", "Georgia", "Serif";
   color: #cdcdcd;
 }
 body.profile section.cover .user .badge {
