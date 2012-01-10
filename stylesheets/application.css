@@ -208,12 +208,11 @@ html {
   right: 0;
   width: 40px;
   height: 18px;
-  padding-top: 5px;
+  padding-top: 6px;
   font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   font-size: 13px;
-  line-height: 1.2em;
   text-align: center;
   text-decoration: none;
   background: #222222;
@@ -573,7 +572,6 @@ a.button.random:hover span {
 }
 .dropdown ul li {
   display: block;
-  padding: 4px 0 4px 12px;
   background: #eeeeee;
   border-top: 1px solid #f7f7f7;
   border-bottom: 1px solid #cdcdcd;
@@ -598,11 +596,13 @@ a.button.random:hover span {
 }
 .dropdown ul li a {
   display: block;
+  height: 16px;
+  padding: 5px 0 4px 12px;
   font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
   text-transform: uppercase;
+  font-size: 15px;
   color: #666666;
   text-decoration: none;
-  line-height: 1.2em;
 }
 .dropdown ul li:hover {
   background: white;
