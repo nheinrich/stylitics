@@ -7,6 +7,25 @@
   text-decoration: none
   background: image-url("icons/16px/comment.png") top left no-repeat
 
+.view_comments
+  display: block
+  padding-left: 17px
+  +din-regular
+  color: #656565
+  font-size: 12px
+  text-decoration: none
+  background: image-url("icons/16px/comment.png") top left no-repeat
+
+.delete
+  display: block
+  width: 16px
+  height: 16px
+  +replace-text("icons/16px/delete.png")
+  background-position: top left
+  background-repeat: no-repeat
+  &:hover
+    background-position: bottom left
+
 .like
   display: block
   padding-left: 17px
@@ -15,3 +34,5 @@
   font-size: 12px
   text-decoration: none
   background: image-url("icons/16px/like.png") top left no-repeat
+  span
+    color: #aaa

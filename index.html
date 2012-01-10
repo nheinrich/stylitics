@@ -37,6 +37,11 @@
         <a href="/profile/random" class="button small random">
           <span>Explore Profiles</span>
         </a>
+        <aside>
+          <a href="javascript:void(0)" class="edit_profile">Edit Profile</a>
+          <span>or</span>
+          <a href="#add_imagery" rel="facebox.add_imagery">Add an Image</a>
+        </aside>
       </nav>
 
       <!-- background added via inline style as it comes from the database -->
@@ -59,16 +64,46 @@
             </div>
           </div>
         </div>
+        <form class="light">
+          <div class="body">
+            <fieldset class="avatar">
+              <label>
+                Avatar Image
+                <span>- 114px square</span>
+              </label>
+              <img src="/images/placeholder/avatar.png" />
+              <input type="file" />
+            </fieldset>
+            <fieldset class="information">
+              <label>Name</label>
+              <input type="text" />
+              <label>Location</label>
+              <input type="text" />
+              <label>Quote</label>
+              <textarea></textarea>
+            </fieldset>
+            <fieldset class="cover">
+              <label>
+                Cover Image
+                <span>- 1040px wide x 320px tall</span>
+              </label>
+              <img src="/images/placeholder/cover_small.png" />
+              <input type="file" />
+            </fieldset>
+          </div>
+          <fieldset class="buttons">
+            <button class="submit">Save Profile</button>
+            <a href="javascript:void(0)" class="cancel">Cancel</a>
+          </fieldset>
+
+        </form>
       </section>
 
       <section class="grid">
         <div class="imagery">
           <div class="group style_inspiration">
             <header>
-              <h1>Style Inspiration</h1>
-              <a href="#add_imagery" class="button highlight" rel="facebox[.add_imagery]">
-                <span>Add Image to Profile</span>
-              </a>
+              <h1>My Style Inspirations</h1>
             </header>
             <ul class="boxes">
               <li class="box">
@@ -86,8 +121,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -105,8 +143,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -124,8 +165,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -143,8 +187,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -162,8 +209,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
             </ul>
@@ -171,7 +221,7 @@
 
           <div class="group favorite_brands">
             <header>
-              <h1>Favorite Brands</h1>
+              <h1>My Favorite Brands</h1>
             </header>
             <ul class="boxes">
               <li class="box">
@@ -189,8 +239,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -208,8 +261,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -227,8 +283,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -246,8 +305,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
             </ul>
@@ -255,7 +317,7 @@
 
           <div class="group favorite_stores">
             <header>
-              <h1>Favorite Stores</h1>
+              <h1>My Favorite Stores</h1>
             </header>
             <ul class="boxes">
               <li class="box">
@@ -273,8 +335,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -292,8 +357,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -311,8 +379,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
             </ul>
@@ -320,7 +391,7 @@
 
           <div class="group recent_purchases">
             <header>
-              <h1>Recent Purchases</h1>
+              <h1>My Recent Purchases</h1>
             </header>
             <ul class="boxes">
               <li class="box">
@@ -338,8 +409,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -357,8 +431,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -376,8 +453,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -395,8 +475,11 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
               <li class="box">
@@ -414,13 +497,254 @@
                   </a>
                 </div>
                 <footer>
-                  <a href="#view_imagery" class="comment" rel="facebox[.view_imagery]">X</a>
-                  <a href="like/id" class="like">like</a>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+            </ul>
+          </div>
+
+          <div class="group favorite_looks">
+            <header>
+              <h1>My Favorite Looks</h1>
+            </header>
+            <ul class="boxes">
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/317/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/195/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/325/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/211/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/277/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+            </ul>
+          </div>
+
+          <div class="group style_icons">
+            <header>
+              <h1>My Style Icons</h1>
+            </header>
+            <ul class="boxes">
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/317/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/195/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/325/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/211/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
+                </footer>
+              </li>
+              <li class="box">
+                <div class="thumbnail">
+                  <a href="#view_imagery" class="image" rel="facebox[.view_imagery]">
+                    <img src="http://lorempixel.com/212/277/fashion" />
+                  </a>
+                  <p>
+                    I love this necklace and how the color of
+                    the handbags matches the grays/blacks
+                    of the rest of the photo.
+                  </p>
+                  <a href="#add_imagery" class="edit" rel="facebox[.add_imagery]">
+                    edit
+                  </a>
+                </div>
+                <footer>
+                  <a href="#view_imagery" class="comment" rel="facebox.view_imagery">N</a>
+                  <a href="like/id" class="like">
+                    like
+                    <span>(N)</span>
+                  </a>
                 </footer>
               </li>
             </ul>
           </div>
         </div>
+
+        <!-- right column -->
 
         <div class="personal">
           <div class="dropdown">
@@ -506,51 +830,51 @@
                 </label>
                 <fieldset>
                   <label>about.me</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Blogger</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Facebook</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Flickr</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Google +</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>LinkedIn</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Pinterest</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Portfolio</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Tumblr</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Twitter</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Web Site</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset>
                   <label>Wordpress</label>
-                  <input type="url" placeholder="Enter URL" />
+                  <input type="text" placeholder="Enter URL" />
                 </fieldset>
                 <fieldset class="buttons">
                   <button class="submit">Save</button>
@@ -564,37 +888,37 @@
                 <a href="javascript:void(0)" class="edit">edit</a>
                 <ul>
                   <li>
-                    <a href="http://thesartorialist.com">
+                    <a href="http://thesartorialist.com" target="_blank">
                       The Sartorialist
                       <span>http://thesartorialist.com</span>
-                    </a>
+                    </a>                    
                   </li>
                   <li>
-                    <a href="http://streetpeeper.com">
+                    <a href="http://streetpeeper.com" target="_blank">
                       Street Peeper
                       <span>http://streetpeeper.com</span>
                     </a>
                   </li>
                   <li>
-                    <a href="http://kingdomofstyle.typepad.co.uk">
+                    <a href="http://kingdomofstyle.typepad.co.uk" target="_blank">
                       Kingdom of Style
                       <span>http://kingdomofstyle.typepad.co.uk</span>
                     </a>
                   </li>
                   <li>
-                    <a href="http://the-coveted.com/blog">
+                    <a href="http://the-coveted.com/blog" target="_blank">
                       The Coveted
                       <span>http://the-coveted.com/blog</span>
                     </a>
                   </li>
                   <li>
-                    <a href="http://thefashionbirdcage.com">
+                    <a href="http://thefashionbirdcage.com" target="_blank">
                       The Fashion Birdcage
                       <span>http://thefashionbirdcage.com</span>
                     </a>
                   </li>
                   <li>
-                    <a href="http://refinery29.com">
+                    <a href="http://refinery29.com" target="_blank">
                       Refinery 29
                       <span>http://refinery29.com</span>
                     </a>
@@ -609,16 +933,22 @@
                   <label>Site Name</label>
                   <input type="text" />
                   <label>Site URL</label>
-                  <input type="url" />
+                  <input type="text" />
+                  <a href="javascript:void(0)" class="delete">
+                    Delete
+                  </a>                  
                 </fieldset>
-                <a href="javascript:void(0)" class="add">
+                <a href="javascript:void(0)" class="add" target="_blank">
                   + add another site
                 </a>
                 <fieldset class="template">
                   <label>Site Name</label>
                   <input type="text" />
                   <label>Site URL</label>
-                  <input type="url" />
+                  <input type="text" />
+                  <a href="javascript:void(0)" class="delete">
+                    Delete
+                  </a>
                 </fieldset>
                 <fieldset class="buttons">
                   <button class="submit">Save</button>
@@ -645,20 +975,6 @@
               </form>
             </li>
             <li class="box with_header text">
-              <header>My Shopping Budget</header>
-              <div class="body">
-                <a href="javascript:void(0)" class="edit">edit</a>
-                <p>$2500 a month</p>
-              </div>
-              <form class="light">
-                <input type="text" value="$2500 a month" />
-                <fieldset class="buttons">
-                  <button class="submit">Save</button>
-                  <a href="javascript:void(0)" class="cancel">Cancel</a>
-                </fieldset>
-              </form>
-            </li>
-            <li class="box with_header text">
               <header>My Closet is...</header>
               <div class="body">
                 <a href="javascript:void(0)" class="edit">edit</a>
@@ -677,13 +993,13 @@
 
             </li>
             <li class="box with_header products">
-              <header>My Next Three Purchases</header>
+              <header>My Next Purchases</header>
               <div class="body">
                 <a href="javascript:void(0)" class="edit">edit</a>
                 <ul>
                   <li>
                     <figure>
-                      <a href="http://www.jcrew.com/mens_category/sweaters/merino/PRDOVR~46710/46710.jsp" target="_blank">
+                      <a href="#view_imagery" rel="facebox.view_imagery">
                         <img src="http://lorempixel.com/40/40/fashion/40px" />
                       </a>
                     </figure>
@@ -691,28 +1007,18 @@
                       <a href="http://www.jcrew.com/mens_category/sweaters/merino/PRDOVR~46710/46710.jsp" target="_blank">
                         Nordic Sweater
                       </a>
-                      <span>
-                        <a href="http://jcrew.com" target="_blank">
-                          jcrew.com
-                        </a>
-                      </span>
                     </figcaption>
                   </li>
                   <li>
                     <figure>
-                      <a href="http://www.jcrew.com/mens_category/sweaters/merino/PRDOVR~46710/46710.jsp" target="_blank">
+                      <a href="#view_imagery" rel="facebox.view_imagery">
                         <img src="http://lorempixel.com/40/40/fashion" />
                       </a>
                     </figure>
                     <figcaption>
-                      <a href="http://www.jcrew.com/mens_category/sweaters/merino/PRDOVR~46710/46710.jsp" target="_blank">
+                      <a href="#view_imagery" rel="facebox.view_imagery">
                         Café Capri
                       </a>
-                      <span>
-                        <a href="http://jcrew.com" target="_blank">
-                          jcrew.com
-                        </a>
-                      </span>
                     </figcaption>
                   </li>
                   <li>
@@ -725,19 +1031,43 @@
                       <a href="http://www.jcrew.com/mens_category/sweaters/merino/PRDOVR~46710/46710.jsp" target="_blank">
                         Homestead Waffle Leggings in stripe
                       </a>
-                      <span>
-                        <a href="http://jcrew.com" target="_blank">
-                          jcrew.com
-                        </a>
-                      </span>
                     </figcaption>
                   </li>
                 </ul>
               </div>
               <form class="light">
-                <label style="color: red;">
-                  Is this going to use the "Add Item" back-end?
+                <label class="hint">
+                  Items you'd like to purchase soon.
                 </label>
+                <fieldset>
+                  <label>Name</label>
+                  <input type="text" />
+                  <label>URL</label>
+                  <input type="text" />
+                  <label>Description</label>
+                  <textarea></textarea>
+                  <label>Image</label>
+                  <input type="file" />
+                  <a href="javascript:void(0)" class="delete">
+                    Delete
+                  </a>
+                </fieldset>
+                <a href="javascript:void(0)" class="add">
+                  + add another item
+                </a>
+                <fieldset class="template">
+                  <label>Name</label>
+                  <input type="text" />
+                  <label>URL</label>
+                  <input type="text" />
+                  <label>Description</label>
+                  <textarea></textarea>
+                  <label>Image</label>
+                  <input type="file" />
+                  <a href="javascript:void(0)" class="delete">
+                    Delete
+                  </a>
+                </fieldset>
                 <fieldset class="buttons">
                   <button class="submit">Save</button>
                   <a href="javascript:void(0)" class="cancel">Cancel</a>
@@ -771,6 +1101,9 @@
                 <fieldset>
                   <label>Item Description</label>
                   <input type="text" />
+                  <a href="javascript:void(0)" class="delete">
+                    Delete
+                  </a>
                 </fieldset>
                 <a href="javascript:void(0)" class="add">
                   + add another item
@@ -778,6 +1111,9 @@
                 <fieldset class="template">
                   <label>Item Description</label>
                   <input type="text" />
+                  <a href="javascript:void(0)" class="delete">
+                    Delete
+                  </a>
                 </fieldset>
                 <fieldset class="buttons">
                   <button class="submit">Save</button>
@@ -803,7 +1139,7 @@
   <!-- popup: add imagery / upload form -->
   <div id="add_imagery">
     <form class="light">
-      <legend>Add Image to Profile</legend>
+      <legend>Add Image to Profile / Edit Image (Fix in Rails)</legend>
       <fieldset>
         <label>
           Title <span>- displayed in expanded view</span>
@@ -828,10 +1164,12 @@
         </label>
         <select>
           <option selected>Which section should this image be added to?</option>
-          <option>Style Inspiration</option>
-          <option>Favorite Brands</option>
-          <option>Favorite Stores</option>
-          <option>Recent Purchases</option>
+          <option>My Style Inspirations</option>
+          <option>My Favorite Brands</option>
+          <option>My Favorite Stores</option>
+          <option>My Recent Purchases</option>
+          <option>My Favorite Looks</option>
+          <option>My Style Icons</option>
         </select>
       </fieldset>
       <fieldset>
@@ -843,6 +1181,10 @@
       <fieldset class="buttons">
         <button class="submit">Save</button>
         <a href="javascript:void(0)" class="cancel">Cancel</a>
+        <!-- TODO: once in rails, remove the inline javascript -->
+        <a href="javascript:void(0)" class="delete_image" onClick="return confirm('Are you sure? \n (popup will close upon [ok] once integrated)')">
+          Delete Image
+        </a>
       </fieldset>
     </form>
   </div>
@@ -852,12 +1194,18 @@
   <div id="view_imagery">
     <header>
       <h1>Optional image title added by user upon upload</h1>
-      <a href="like/id" class="like">like</a>
+      <aside>
+        <a href="like/id" class="like">
+          like
+          <span>(N)</span>
+        </a>          
+        <a href="javascript:void(0)" class="view_comments">view comments</a>
+      </aside>      
     </header>
     <figure>
       <img src="http://lorempixel.com/1000/750/fashion/large-image-constrained-by-css" />
       <ul>
-        <li><a href="prev/image" class="prev">Previous</a></li>        
+        <li><a href="prev/image" class="prev">Previous</a></li>
         <li><a href="next/image" class="next">Next</a></li>
       </ul>
     </figure>
@@ -869,7 +1217,7 @@
     </figcaption>
     <section class="comments">
       <h1>
-        Comments <span>(9)</span>
+        Comments <span>(N)</span>
       </h1>
       <ul>
         <li>
@@ -980,7 +1328,7 @@
           </a>
           <div class="speech_bubble">
             <span class="triangle"></span>
-            <textarea></textarea>            
+            <textarea></textarea>
             <fieldset class="buttons">
               <button class="submit">Save</button>
               <a href="javascript:void(0)" class="cancel">Cancel</a>
@@ -997,6 +1345,7 @@
   <script src="javascripts/libs/jquery-1.7.1.min.js" type="text/javascript"></script>
   <script src="javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
   <script src="javascripts/libs/jquery.imagesloaded.js" type="text/javascript"></script>
+  <script src="javascripts/libs/jquery.scrollTo.min.js" type="text/javascript"></script>
   <script src="javascripts/libs/facebox.js" type="text/javascript"></script>
   <!-- application -->
   <script src="javascripts/application.js"></script>

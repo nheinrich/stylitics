@@ -11,14 +11,16 @@
     clear: both
     margin-bottom: 19px
     header
-      margin: 0 0 19px
+      margin: 0 15px 19px 0 
+      padding-left: 2px     
       h1
         +inline-block
-        padding: 6px 14px
+        padding: 6px 9px
         +din-regular
         color: $txt_white
         font-size: 24px
         background: image-url("patterns/bg_gray_diagonal.png")
+        +single-box-shadow(rgba(128, 128, 128, .5), 0, 0, 1px, 1px)              
       .highlight
         +float-right
         margin-right: 15px
@@ -176,14 +178,6 @@
         text-decoration: none
         line-height: 1.2em
         +hover-link
-      span a
-        display: block
-        clear: both
-        color: #a3a3a3
-        font-size: 11px
-        text-decoration: underline
-        &:hover
-          color: #343434
 
 .box.seeking
   .body
@@ -198,6 +192,7 @@
 .box.sites
   .body
     li
+      position: relative    
       margin-bottom: 12px
       &:last-child
         margin-bottom: 6px
@@ -206,6 +201,14 @@
         color: #343434
         text-decoration: none
         line-height: 1.2em
+      a.delete
+        display: none
+        position: absolute
+        top: 0
+        right: 0
+      &:hover
+        a.delete
+          display: block
       span
         display: block
         clear: both
@@ -213,13 +216,22 @@
         font-size: 11px
         text-decoration: underline
         
-.box.sites, .box.seeking
+.box.sites, .box.seeking, .box.products
   form
     fieldset
+      position: relative
       padding: 10px 0
       border-top: 1px solid #cdcdcd
       input
         margin-bottom: 5px
+      a.delete
+        display: none
+        position: absolute
+        top: 6px
+        right: 0
+      &:hover
+        a.delete
+          display: block
     fieldset:nth-child(2)
       border-top: 0
     fieldset.buttons

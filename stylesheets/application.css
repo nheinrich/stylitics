@@ -144,7 +144,8 @@ html {
   margin-bottom: 19px;
 }
 .grid .group header {
-  margin: 0 0 19px;
+  margin: 0 15px 19px 0;
+  padding-left: 2px;
 }
 .grid .group header h1 {
   display: -moz-inline-box;
@@ -152,12 +153,16 @@ html {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  padding: 6px 14px;
+  padding: 6px 9px;
   font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   font-size: 24px;
   background: url('/images/patterns/bg_gray_diagonal.png?1325623130');
+  -moz-box-shadow: 0 0 1px 1px rgba(128, 128, 128, 0.5);
+  -webkit-box-shadow: 0 0 1px 1px rgba(128, 128, 128, 0.5);
+  -o-box-shadow: 0 0 1px 1px rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 1px 1px rgba(128, 128, 128, 0.5);
 }
 .grid .group header h1 {
   *display: inline;
@@ -367,16 +372,6 @@ html {
 .box.products .body li a:hover {
   text-decoration: underline;
 }
-.box.products .body li span a {
-  display: block;
-  clear: both;
-  color: #a3a3a3;
-  font-size: 11px;
-  text-decoration: underline;
-}
-.box.products .body li span a:hover {
-  color: #343434;
-}
 
 .box.seeking .body ul {
   list-style: disc;
@@ -390,6 +385,7 @@ html {
 }
 
 .box.sites .body li {
+  position: relative;
   margin-bottom: 12px;
 }
 .box.sites .body li:last-child {
@@ -401,6 +397,15 @@ html {
   text-decoration: none;
   line-height: 1.2em;
 }
+.box.sites .body li a.delete {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.box.sites .body li:hover a.delete {
+  display: block;
+}
 .box.sites .body li span {
   display: block;
   clear: both;
@@ -409,17 +414,27 @@ html {
   text-decoration: underline;
 }
 
-.box.sites form fieldset, .box.seeking form fieldset {
+.box.sites form fieldset, .box.seeking form fieldset, .box.products form fieldset {
+  position: relative;
   padding: 10px 0;
   border-top: 1px solid #cdcdcd;
 }
-.box.sites form fieldset input, .box.seeking form fieldset input {
+.box.sites form fieldset input, .box.seeking form fieldset input, .box.products form fieldset input {
   margin-bottom: 5px;
 }
-.box.sites form fieldset:nth-child(2), .box.seeking form fieldset:nth-child(2) {
+.box.sites form fieldset a.delete, .box.seeking form fieldset a.delete, .box.products form fieldset a.delete {
+  display: none;
+  position: absolute;
+  top: 6px;
+  right: 0;
+}
+.box.sites form fieldset:hover a.delete, .box.seeking form fieldset:hover a.delete, .box.products form fieldset:hover a.delete {
+  display: block;
+}
+.box.sites form fieldset:nth-child(2), .box.seeking form fieldset:nth-child(2), .box.products form fieldset:nth-child(2) {
   border-top: 0;
 }
-.box.sites form fieldset.buttons, .box.seeking form fieldset.buttons {
+.box.sites form fieldset.buttons, .box.seeking form fieldset.buttons, .box.products form fieldset.buttons {
   padding-top: 12px;
 }
 
@@ -821,6 +836,25 @@ form.light fieldset.buttons .cancel:hover,
 form.dark fieldset.buttons .cancel:hover {
   text-decoration: underline;
 }
+form.light fieldset.buttons .delete_image,
+form.dark fieldset.buttons .delete_image {
+  display: inline;
+  float: right;
+  padding-top: 15px;
+  font-family: "Arial", "Sans-serif";
+  color: #232323;
+  font-size: 12px;
+  text-decoration: none;
+  text-decoration: none;
+}
+form.light fieldset.buttons .delete_image:hover,
+form.dark fieldset.buttons .delete_image:hover {
+  text-decoration: underline;
+}
+form.light fieldset.buttons .delete_image:hover,
+form.dark fieldset.buttons .delete_image:hover {
+  color: red;
+}
 
 form.light legend {
   color: #232323;
@@ -865,6 +899,34 @@ form.dark fieldset.buttons .cancel {
   background: url('/images/icons/16px/comment.png?1325623661') top left no-repeat;
 }
 
+.view_comments {
+  display: block;
+  padding-left: 17px;
+  font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  color: #656565;
+  font-size: 12px;
+  text-decoration: none;
+  background: url('/images/icons/16px/comment.png?1325623661') top left no-repeat;
+}
+
+.delete {
+  display: block;
+  width: 16px;
+  height: 16px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/icons/16px/delete.png?1326170733');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.delete:hover {
+  background-position: bottom left;
+}
+
 .like {
   display: block;
   padding-left: 17px;
@@ -875,14 +937,33 @@ form.dark fieldset.buttons .cancel {
   text-decoration: none;
   background: url('/images/icons/16px/like.png?1325623661') top left no-repeat;
 }
+.like span {
+  color: #aaaaaa;
+}
 
 nav.page {
   height: 37px;
   padding: 0 19px;
   background: #f3f3f3;
 }
+nav.page a.button {
+  float: left;
+}
 nav.page a.button.small {
   margin-top: 6px;
+}
+nav.page aside {
+  float: right;
+  padding-top: 13px;
+  font-family: "Arial", "Sans-serif";
+  font-size: 12px;
+  color: #444444;
+}
+nav.page aside a {
+  color: #444444;
+}
+nav.page aside a:hover {
+  color: #32a800;
 }
 
 .popup form.light,
@@ -952,17 +1033,22 @@ nav.page a.button.small {
   display: inline;
   float: left;
   display: block;
-  width: 850px;
+  width: 700px;
   font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   font-size: 24px;
 }
-#facebox.view_imagery .content header .like {
+#facebox.view_imagery .content header aside {
+  display: inline;
+  float: right;
+  padding-top: 2px;
+}
+#facebox.view_imagery .content header aside a {
   display: inline;
   float: right;
   height: 15px;
-  margin-top: 2px;
+  margin-left: 5px;
   padding: 3px 8px 3px 25px;
   font-size: 15px;
   background-color: white;
@@ -1134,7 +1220,8 @@ a.user.small img {
   height: 28px;
 }
 
-body.profile .cover {
+body.profile section.cover {
+  position: relative;
   height: 282px;
   margin-bottom: 19px;
   padding: 19px;
@@ -1143,42 +1230,42 @@ body.profile .cover {
   -o-box-shadow: 0 3px 5px 0 rgba(128, 128, 128, 0.4);
   box-shadow: 0 3px 5px 0 rgba(128, 128, 128, 0.4);
 }
-body.profile .cover .user {
+body.profile section.cover .user {
   display: inline-block;
   padding: 12px;
   background: rgba(0, 0, 0, 0.85);
 }
-body.profile .cover .user img {
+body.profile section.cover .user img {
   display: inline;
   float: left;
   width: 114px;
   height: 114px;
   margin-right: 12px;
 }
-body.profile .cover .user .info {
+body.profile section.cover .user .info {
   display: inline;
   float: left;
 }
-body.profile .cover .user header {
+body.profile section.cover .user header {
   display: inline;
   float: left;
   clear: both;
   margin: 0 24px 7px 0;
 }
-body.profile .cover .user h1, body.profile .cover .user h2 {
+body.profile section.cover .user h1, body.profile section.cover .user h2 {
   font-family: "Conv_FF_DIN_Condensed_Regular", "Arial", "Sans-serif";
   text-transform: uppercase;
 }
-body.profile .cover .user h1 {
+body.profile section.cover .user h1 {
   color: white;
   font-size: 30px;
   margin-bottom: 3px;
 }
-body.profile .cover .user h2 {
+body.profile section.cover .user h2 {
   color: #999999;
   font-size: 24px;
 }
-body.profile .cover .user .quote {
+body.profile section.cover .user .quote {
   display: block;
   clear: left;
   max-width: 320px;
@@ -1188,9 +1275,81 @@ body.profile .cover .user .quote {
   font-family: "Conv_Museo_Slab_500italic", Georgia, Serif;
   color: #cdcdcd;
 }
-body.profile .cover .user .badge {
+body.profile section.cover .user .badge {
   display: inline;
   float: right;
+}
+body.profile section.cover form.light {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #e3e3e3;
+  border-top: 1px solid #cdcdcd;
+}
+body.profile section.cover form.light .body {
+  width: 1002px;
+  height: 229px;
+  padding: 15px 19px;
+  border-bottom: 1px solid #aaaaaa;
+}
+body.profile section.cover form.light label {
+  margin-bottom: 8px;
+  color: #232323;
+  font-style: normal;
+}
+body.profile section.cover form.light label span {
+  color: #999999;
+  font-style: italic;
+}
+body.profile section.cover form.light input, body.profile section.cover form.light textarea {
+  width: 360px;
+}
+body.profile section.cover form.light input {
+  height: 20px;
+}
+body.profile section.cover form.light input[type="file"] {
+  width: 180px;
+  padding-top: 6px;
+}
+body.profile section.cover form.light textarea {
+  height: 60px;
+}
+body.profile section.cover form.light fieldset {
+  float: left;
+  width: 238px;
+  margin-right: 16px;
+}
+body.profile section.cover form.light fieldset.avatar label {
+  margin-bottom: 8px;
+}
+body.profile section.cover form.light fieldset.avatar img {
+  margin-bottom: 7px;
+}
+body.profile section.cover form.light fieldset.information {
+  width: 492px;
+  margin-bottom: 10px;
+}
+body.profile section.cover form.light fieldset.cover {
+  position: relative;
+  margin-right: 0;
+}
+body.profile section.cover form.light fieldset.cover img {
+  display: block;
+  margin-bottom: 16px;
+}
+body.profile section.cover form.light fieldset.buttons {
+  width: 1002px;
+  height: 47px;
+  padding: 10px 19px 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #aaaaaa;
+  clear: both;
+}
+body.profile section.cover form.light fieldset.buttons button {
+  padding: 6px 20px;
+  font-size: 18px;
 }
 
 body.profile #page {

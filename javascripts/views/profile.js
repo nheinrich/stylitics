@@ -18,6 +18,7 @@ app.views.profile.init = function(element){
   this.initialize.hovers();
   this.initialize.captions();
   this.initialize.forms();
+  this.initialize.popup();  
   app.dropdown.init();
 }
 
@@ -29,10 +30,15 @@ app.views.profile.initialize = {
     })
   },  
   forms:function(){
+    // edit profile / cover form (including form cancel button)
+    $(".edit_profile, .cover .cancel").on("click", function(e){
+      $(".cover form").toggle();
+      $(".personal .edit").click();
+    })
     // edit button
     $(".personal a.edit").on("click", function(e){
-      $(this).hide().parent().hide()
-        .siblings("form").show();
+      $(this).hide().parent().toggle()
+        .siblings("form").toggle();
       e.preventDefault();
     })
     // form submission
@@ -57,6 +63,11 @@ app.views.profile.initialize = {
       $template.removeClass("template").insertBefore($this)
       e.preventDefault();
     })
+    // remove field (in form)
+    $(".personal").on("click", ".delete", function(e){
+      $(this).closest("fieldset").remove();
+      e.preventDefault();
+    })
   },
   hovers:function(){
     $(".box").hover(
@@ -76,8 +87,13 @@ app.views.profile.initialize = {
     $boxes.imagesLoaded(function(){
       $boxes.masonry();
     })
+  },
+  popup:function(){
+    $("#facebox").on("click", ".view_comments", function(e){
+      $.scrollTo("#facebox section.comments", 300, {offset: {top: -20}});
+      e.preventDefault();
+    })
   }
-
 }
 
 
