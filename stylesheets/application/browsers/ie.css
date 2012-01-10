@@ -12,7 +12,3 @@
   behavior: url("/stylesheets/application/browsers/PIE.htc");
   z-index: 0;
 }
-
-body.ie {
-  background-color: black;
-}
