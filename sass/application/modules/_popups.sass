@@ -1,9 +1,9 @@
 // forms.light / forms.dark --------------------------------------------------
 // alterations to forms.light and forms.dark for styling for popups
 
-.popup 
+.popup
   form.light,
-  form.dark  
+  form.dark
     display: block
     fieldset
       margin-bottom: 10px
@@ -28,7 +28,7 @@
 #add_imagery
   display: none
 
-#facebox.add_imagery 
+#facebox.add_imagery
   .content
     width: 410px
     form.light
@@ -53,9 +53,9 @@
 #view_imagery
   display: none
 
-#facebox.view_imagery 
+#facebox.view_imagery
   +dark_popup
-  
+
   .content
     width: 960px
     background: #000
@@ -80,30 +80,34 @@
           font-size: 15px
           background-color: $bg_white
           background-position: 7px 4px
-          +border-radius(3px)          
+          +border-radius(3px)
     figure
       +clearfix
       margin-bottom: 30px
       img
         max-width: 960px
       li
-        background: red
+        display: block
+        +float-left
+        width: 50%
+        background: #171717
         a
-          +float-left
           display: block
-          width: 48.9%
           padding: 5px
           +din-regular
           color: $txt_white
           text-decoration: none
-          background: #171717
           &:hover
             color: $txt_gray_dark
             background: $bg_gray_light
-        &:last-child
+        &:first-child
           a
-            +float-right
+            border-right: 1px solid #000
+        &:last-child
+          +float-right
+          a
             text-align: right
+            border-left: 1px solid #000
     figcaption
       margin-bottom: 30px
       h2
@@ -174,8 +178,8 @@
           position: absolute
           top: 18px
           left: -8px
-          width: 0px 
-          height: 0px 
+          width: 0px
+          height: 0px
           border-bottom: 8px solid transparent
           border-top: 8px solid transparent
           border-right: 8px solid $bg_white

@@ -1100,28 +1100,34 @@ nav.page aside a:hover {
   max-width: 960px;
 }
 #facebox.view_imagery .content figure li {
-  background: red;
-}
-#facebox.view_imagery .content figure li a {
+  display: block;
   display: inline;
   float: left;
+  width: 50%;
+  background: #171717;
+}
+#facebox.view_imagery .content figure li a {
   display: block;
-  width: 48.9%;
   padding: 5px;
   font-family: "DINCondRegular", "Arial", "Sans-serif";
   text-transform: uppercase;
   color: white;
   text-decoration: none;
-  background: #171717;
 }
 #facebox.view_imagery .content figure li a:hover {
   color: #232323;
   background: #f3f3f3;
 }
-#facebox.view_imagery .content figure li:last-child a {
+#facebox.view_imagery .content figure li:first-child a {
+  border-right: 1px solid black;
+}
+#facebox.view_imagery .content figure li:last-child {
   display: inline;
   float: right;
+}
+#facebox.view_imagery .content figure li:last-child a {
   text-align: right;
+  border-left: 1px solid black;
 }
 #facebox.view_imagery .content figcaption {
   margin-bottom: 30px;
