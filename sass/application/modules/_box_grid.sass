@@ -201,14 +201,6 @@
         color: #343434
         text-decoration: none
         line-height: 1.2em
-      a.delete
-        display: none
-        position: absolute
-        top: 0
-        right: 0
-      &:hover
-        a.delete
-          display: block
       span
         display: block
         clear: both
@@ -220,14 +212,17 @@
   form
     fieldset
       position: relative
-      padding: 10px 0
+      // have to use margin instead of padding due to gecko bug
+      // http://cl.ly/3d1G412M340q2s2s1B3O
+      margin: 10px 0
+      padding: 0
       border-top: 1px solid #cdcdcd
       input
         margin-bottom: 5px
       a.delete
         display: none
         position: absolute
-        top: 6px
+        top: -4px
         right: 0
       &:hover
         a.delete
