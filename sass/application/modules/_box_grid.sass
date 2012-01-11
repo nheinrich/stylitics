@@ -212,26 +212,43 @@
   form
     fieldset
       position: relative
-      // have to use margin instead of padding due to gecko bug
-      // http://cl.ly/3d1G412M340q2s2s1B3O
-      margin: 10px 0
-      padding: 0
+      padding: 10px 0
       border-top: 1px solid #cdcdcd
       input
         margin-bottom: 5px
-      a.delete
+      .delete
         display: none
         position: absolute
-        top: -4px
+        top: 6px
         right: 0
       &:hover
-        a.delete
+        .delete
           display: block
     fieldset:nth-child(2)
       border-top: 0
     fieldset.buttons
       padding-top: 12px
-      
+
 .box.with_header
   padding-top: 40px
 
+
+// hacks for firefox
+// have to use margin instead of padding due to gecko bug
+// http://cl.ly/3d1G412M340q2s2s1B3O
+@-moz-document url-prefix()
+  .box.sites, .box.seeking, .box.products
+    form
+      fieldset
+        margin: 10px 0
+        padding: 0
+        label:first-child
+          padding-top: 10px
+
+  .box.products
+    form
+      overflow: hidden
+    input[type="file"]
+      // can't control width of input in firefox
+      height: 24px
+      margin-left: -27px
