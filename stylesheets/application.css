@@ -1262,9 +1262,16 @@ body.profile section.cover {
   box-shadow: 0 3px 5px 0 rgba(128, 128, 128, 0.4);
 }
 body.profile section.cover .user {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
   display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
   padding: 12px;
   background: rgba(0, 0, 0, 0.85);
+}
+body.profile section.cover .user {
+  *display: inline;
 }
 body.profile section.cover .user img {
   display: inline;

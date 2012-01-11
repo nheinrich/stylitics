@@ -14,7 +14,7 @@ html.ie body
 // modules ----------
 
 // forms
-html.ie8
+html.ie8, html.ie7
   form.light,
   form.dark
     fieldset.buttons
@@ -22,7 +22,7 @@ html.ie8
         +pie
 
 // popups
-html.ie8
+html.ie8, html.ie7
   #facebox.view_imagery 
     .content
       header
@@ -34,14 +34,14 @@ html.ie8
 // profile ----------
 
 // cover
-html.ie8
+html.ie8, html.ie7
   body.profile
     section.cover
       .user
         background: #000
 
 // buttons
-html.ie8
+html.ie8, html.ie7
   body.profile
     a.button
       +pie
@@ -49,7 +49,7 @@ html.ie8
         background-color: #3abc00
 
 // dropdown
-html.ie8
+html.ie8, html.ie7
   body.profile
     .dropdown
       a.button
@@ -59,7 +59,7 @@ html.ie8
           background-color: transparent
 
 // box grid
-html.ie8
+html.ie8, html.ie7
   .box.sites, .box.seeking, .box.products
     form
       fieldset
@@ -71,3 +71,20 @@ html.ie8
 // ie7 -----------------------------------------------------------------------
 
 html.ie7
+  body.profile
+    section.cover
+      .user
+        h1
+          min-width: 250px
+        .badge
+          float: left
+          position: relative
+          left: 2px
+
+        
+html.ie7
+  body.profile
+    .personal
+      .dropdown
+        a.button
+          // +float-right
