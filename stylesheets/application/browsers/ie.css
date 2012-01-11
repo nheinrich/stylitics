@@ -40,6 +40,10 @@ html.ie8 .box.sites form fieldset .delete:hover, html.ie8 .box.seeking form fiel
   background-position: top left;
 }
 
+html.ie7 a.button.random span {
+  background-position: right 0px;
+}
+
 html.ie7 body.profile section.cover .user h1 {
   min-width: 250px;
 }
@@ -47,4 +51,8 @@ html.ie7 body.profile section.cover .user .badge {
   float: left;
   position: relative;
   left: 2px;
+}
+
+html.ie7 body.profile .personal .dropdown a.button {
+  width: 91px;
 }
