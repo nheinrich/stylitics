@@ -1121,11 +1121,11 @@ nav.page aside a:hover {
 #facebox.view_imagery .content figure li:first-child a {
   border-right: 1px solid black;
 }
-#facebox.view_imagery .content figure li:last-child {
+#facebox.view_imagery .content figure li:last-child, #facebox.view_imagery .content figure li.last {
   display: inline;
   float: right;
 }
-#facebox.view_imagery .content figure li:last-child a {
+#facebox.view_imagery .content figure li:last-child a, #facebox.view_imagery .content figure li.last a {
   text-align: right;
   border-left: 1px solid black;
 }

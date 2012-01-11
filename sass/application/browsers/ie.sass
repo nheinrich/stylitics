@@ -8,6 +8,18 @@ html.ie body
 
 // ie9 -----------------------------------------------------------------------
 
+// random button
+html.ie9, html.ie8
+  a.button.random
+    span
+      background-position: right 0px
+      
+// add imagery popup
+html.ie9, html.ie8, html.ie7
+  form.light
+    fieldset.buttons
+      .delete_image
+        margin-top: -4px
 
 // ie8 -----------------------------------------------------------------------
 
@@ -72,13 +84,6 @@ html.ie8, html.ie7
 
 // profile ----------
 
-// random button
-html.ie7
-  a.button.random
-    span
-      background-position: right 0px
-
-
 // cover 
 html.ie7
   body.profile
@@ -91,8 +96,7 @@ html.ie7
           float: left
           position: relative
           left: 2px
-            
-            
+                        
 // share button        
 html.ie7
   body.profile
@@ -100,5 +104,19 @@ html.ie7
       .dropdown
         a.button
           width: 91px
-          
-          
+
+
+
+html.ie7
+  #facebox.add_imagery
+    form.light
+      fieldset.buttons
+        button
+          float: left
+        .cancel
+          float: left
+          margin-top: 13px
+          margin-left: 10px
+        .delete_image
+          margin-top: -2px
+
