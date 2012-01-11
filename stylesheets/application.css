@@ -399,15 +399,6 @@ html {
   text-decoration: none;
   line-height: 1.2em;
 }
-.box.sites .body li a.delete {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.box.sites .body li:hover a.delete {
-  display: block;
-}
 .box.sites .body li span {
   display: block;
   clear: both;
@@ -424,13 +415,13 @@ html {
 .box.sites form fieldset input, .box.seeking form fieldset input, .box.products form fieldset input {
   margin-bottom: 5px;
 }
-.box.sites form fieldset a.delete, .box.seeking form fieldset a.delete, .box.products form fieldset a.delete {
+.box.sites form fieldset .delete, .box.seeking form fieldset .delete, .box.products form fieldset .delete {
   display: none;
   position: absolute;
   top: 6px;
   right: 0;
 }
-.box.sites form fieldset:hover a.delete, .box.seeking form fieldset:hover a.delete, .box.products form fieldset:hover a.delete {
+.box.sites form fieldset:hover .delete, .box.seeking form fieldset:hover .delete, .box.products form fieldset:hover .delete {
   display: block;
 }
 .box.sites form fieldset:nth-child(2), .box.seeking form fieldset:nth-child(2), .box.products form fieldset:nth-child(2) {
@@ -442,6 +433,24 @@ html {
 
 .box.with_header {
   padding-top: 40px;
+}
+
+@-moz-document url-prefix() {
+  .box.sites form fieldset, .box.seeking form fieldset, .box.products form fieldset {
+    margin: 10px 0;
+    padding: 0;
+  }
+  .box.sites form fieldset label:first-child, .box.seeking form fieldset label:first-child, .box.products form fieldset label:first-child {
+    padding-top: 10px;
+  }
+
+  .box.products form {
+    overflow: hidden;
+  }
+  .box.products input[type="file"] {
+    height: 24px;
+    margin-left: -27px;
+  }
 }
 
 a.button {
@@ -725,6 +734,14 @@ a.button.random:hover span {
   z-index: 99;
 }
 
+form.light legend, form.light h1,
+form.dark legend,
+form.dark h1 {
+  margin-bottom: 24px;
+  font-family: "DINCondRegular", "Arial", "Sans-serif";
+  text-transform: uppercase;
+  font-size: 24px;
+}
 form.light legend,
 form.dark legend {
   margin-bottom: 24px;
@@ -758,6 +775,7 @@ form.dark input {
   margin-bottom: 6px;
   padding: 3px 4px 4px;
   color: #444444;
+  font-size: 12px;
   background: #fcfcfc;
   border: 1px solid #cdcdcd;
   -moz-box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
@@ -777,6 +795,7 @@ form.dark textarea {
   padding: 4px;
   font-family: "Arial", "Sans-serif";
   color: #444444;
+  font-size: 12px;
   line-height: 1.4em;
   background: #fcfcfc;
   border: 1px solid #cdcdcd;

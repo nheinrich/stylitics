@@ -1,4 +1,5 @@
-.pie-element {
+.pie-element, html.ie8 form.light fieldset.buttons button,
+html.ie8 form.dark fieldset.buttons button, html.ie8 #facebox.view_imagery .content header aside a, html.ie8 body.profile a.button {
   behavior: url("/stylesheets/application/browsers/PIE.htc");
   position: relative;
 }
@@ -11,4 +12,30 @@
 .z-pie-element, .widget h3 {
   behavior: url("/stylesheets/application/browsers/PIE.htc");
   z-index: 0;
+}
+
+html.ie body {
+  background-color: black;
+}
+
+html.ie8 body.profile section.cover .user {
+  background: black;
+}
+
+html.ie8 body.profile a.button:hover {
+  background-color: #3abc00;
+}
+
+html.ie8 body.profile .dropdown a.button span.text {
+  padding-top: 7px;
+}
+html.ie8 body.profile .dropdown a.button:hover {
+  background-color: transparent;
+}
+
+html.ie8 .box.sites form fieldset .delete, html.ie8 .box.seeking form fieldset .delete, html.ie8 .box.products form fieldset .delete {
+  display: block;
+}
+html.ie8 .box.sites form fieldset .delete:hover, html.ie8 .box.seeking form fieldset .delete:hover, html.ie8 .box.products form fieldset .delete:hover {
+  background-position: top left;
 }

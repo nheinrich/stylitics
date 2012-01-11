@@ -5,10 +5,16 @@
 
 form.light, 
 form.dark
-  legend
+  // need to use h1 instead of legend because 
+  // IE8- can't support the styling
+  legend, h1
     margin-bottom: 24px
     +din-regular
     font-size: 24px
+  legend
+    margin-bottom: 24px
+    +din-regular
+    font-size: 24px    
   label
     display: block
     margin-bottom: 5px
@@ -28,6 +34,7 @@ form.dark
     margin-bottom: 6px
     padding: 3px 4px 4px
     color: #444
+    font-size: 12px
     background: #fcfcfc
     border: 1px solid #cdcdcd
     +single-box-shadow(rgba(0, 0, 0, .2), 0, 0, 1px, 0, inset)
@@ -40,6 +47,7 @@ form.dark
     padding: 4px
     +arial
     color: #444
+    font-size: 12px
     line-height: 1.4em
     background: #fcfcfc
     border: 1px solid #cdcdcd

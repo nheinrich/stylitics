@@ -3,12 +3,71 @@
 // common --------------------------------------------------------------------
 
 // this is likely temporary until we integrate with the existing app
-// background-image(linear-gradient) doesn't work in IE9 or less
-// body.ie
-//   background-color: #000
+html.ie body
+  background-color: #000
 
 // ie9 -----------------------------------------------------------------------
 
+
 // ie8 -----------------------------------------------------------------------
 
+// modules ----------
+
+// forms
+html.ie8
+  form.light,
+  form.dark
+    fieldset.buttons
+      button
+        +pie
+
+// popups
+html.ie8
+  #facebox.view_imagery 
+    .content
+      header
+        aside
+          a
+            +pie
+          
+
+// profile ----------
+
+// cover
+html.ie8
+  body.profile
+    section.cover
+      .user
+        background: #000
+
+// buttons
+html.ie8
+  body.profile
+    a.button
+      +pie
+      &:hover
+        background-color: #3abc00
+
+// dropdown
+html.ie8
+  body.profile
+    .dropdown
+      a.button
+        span.text
+          padding-top: 7px
+        &:hover
+          background-color: transparent
+
+// box grid
+html.ie8
+  .box.sites, .box.seeking, .box.products
+    form
+      fieldset
+        .delete
+          display: block
+          &:hover
+            background-position: top left
+
 // ie7 -----------------------------------------------------------------------
+
+html.ie7
