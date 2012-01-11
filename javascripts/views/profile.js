@@ -32,8 +32,10 @@ app.views.profile.initialize = {
   forms:function(){
     // edit profile / cover form (including form cancel button)
     $(".edit_profile, .cover .cancel").on("click", function(e){
-      $(".cover form").toggle();
-      $(".personal .edit").click();
+      $(".cover form").toggle();      
+      // would have used trigger("click") but ie7 didn't like it
+      $(".personal .body").hide();    
+      $(".personal form").show()
     })
     // edit button
     $(".personal a.edit").on("click", function(e){
